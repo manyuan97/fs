@@ -1,0 +1,76 @@
+{
+    "model_name": "linear_regression",
+    "results": {
+        "train": {
+            "mse": 269.16082879576464,
+            "pearson_corr": 0.9966999253968405,
+            "pearson_corr_without_mean": 0.9967025193683628,
+            "conf_matrix": [
+                [
+                    503,
+                    14
+                ],
+                [
+                    13,
+                    470
+                ]
+            ],
+            "mean_value": -5.6639568262224405,
+            "std_dev": 201.44295076498207,
+            "skewness": 0.04379900431973757,
+            "kurt": -0.15986578322615275,
+            "positive_count": 484,
+            "negative_count": 516
+        },
+        "val": {
+            "mse": 77857.87473173687,
+            "pearson_corr": -0.08995802021558218,
+            "pearson_corr_without_mean": -0.08948190831020611,
+            "conf_matrix": [
+                [
+                    24,
+                    24
+                ],
+                [
+                    25,
+                    27
+                ]
+            ],
+            "mean_value": 6.546531252499399,
+            "std_dev": 230.39259061492567,
+            "skewness": 0.4373761640028554,
+            "kurt": -0.14499188661574758,
+            "positive_count": 51,
+            "negative_count": 49
+        },
+        "test": {
+            "mse": 77857.87473173687,
+            "pearson_corr": -0.08995802021558218,
+            "pearson_corr_without_mean": -0.08948190831020611,
+            "conf_matrix": [
+                [
+                    24,
+                    24
+                ],
+                [
+                    25,
+                    27
+                ]
+            ],
+            "mean_value": 6.546531252499399,
+            "std_dev": 230.39259061492567,
+            "skewness": 0.4373761640028554,
+            "kurt": -0.14499188661574758,
+            "positive_count": 51,
+            "negative_count": 49
+        }
+    },
+    "args": {
+        "target_column": "y2",
+        "k": 100,
+        "feature_selection": "f_regression",
+        "save_dir": "results/f_regression_y2_LR",
+        "regressor_name": "linear_regression",
+        "regressor_params": "configs/linear_regression.json"
+    }
+}

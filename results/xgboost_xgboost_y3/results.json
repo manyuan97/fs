@@ -1,0 +1,77 @@
+{
+    "model_name": "xgboost",
+    "results": {
+        "train": {
+            "mse": 121.32960050130667,
+            "pearson_corr": 0.9976161603570657,
+            "pearson_corr_without_mean": 0.9976177258616734,
+            "conf_matrix": [
+                [
+                    512,
+                    10
+                ],
+                [
+                    16,
+                    462
+                ]
+            ],
+            "mean_value": -4.046154022216797,
+            "std_dev": 149.53567504882812,
+            "skewness": 0.1084507601244601,
+            "kurt": -0.10090989810918849,
+            "positive_count": 472,
+            "negative_count": 528
+        },
+        "val": {
+            "mse": 43731.18302705012,
+            "pearson_corr": 0.005980760511637349,
+            "pearson_corr_without_mean": 0.006673218898095988,
+            "conf_matrix": [
+                [
+                    26,
+                    23
+                ],
+                [
+                    29,
+                    22
+                ]
+            ],
+            "mean_value": 3.334179401397705,
+            "std_dev": 141.431884765625,
+            "skewness": 0.212629169592961,
+            "kurt": -0.7442694022747349,
+            "positive_count": 45,
+            "negative_count": 55
+        },
+        "test": {
+            "mse": 43731.18302705012,
+            "pearson_corr": 0.005980760511637349,
+            "pearson_corr_without_mean": 0.006673218898095988,
+            "conf_matrix": [
+                [
+                    26,
+                    23
+                ],
+                [
+                    29,
+                    22
+                ]
+            ],
+            "mean_value": 3.334179401397705,
+            "std_dev": 141.431884765625,
+            "skewness": 0.212629169592961,
+            "kurt": -0.7442694022747349,
+            "positive_count": 45,
+            "negative_count": 55
+        }
+    },
+    "args": {
+        "target_column": "y3",
+        "model_name": "xgboost",
+        "regressor_name": "xgboost",
+        "regressor_params": "configs/xgboost.json",
+        "model_params": "configs/xgboost.json",
+        "threshold": "1.25*mean",
+        "save_dir": "results/xgboost_xgboost_y3"
+    }
+}

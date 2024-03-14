@@ -1,0 +1,3 @@
+python run_model.py --target_column y1 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name linear_regression --regressor_params configs/linear_regression.json --save_dir results/lightgbm_LR_y1
+python run_model.py --target_column y2 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name linear_regression --regressor_params configs/linear_regression.json --save_dir results/lightgbm_LR_y2
+python run_model.py --target_column y3 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name linear_regression --regressor_params configs/linear_regression.json --save_dir results/lightgbm_LR_y3

@@ -91,7 +91,7 @@ if __name__ == "__main__":
     parser.add_argument('--regressor_name', type=str, default='linear_regression', help='The target column for prediction.')
     parser.add_argument('--regressor_params', type=str, default='./configs/linear_regression.json',
                         help='File path to JSON string of regressor parameters.')
-    parser.add_argument('--model_params', type=str, default='./configs/xgboost_config.json',
+    parser.add_argument('--model_params', type=str, default='./configs/xgboost.json',
                         help='File path to JSON string of model parameters.')
     parser.add_argument('--threshold', type=str, default='1.25*mean', help='Threshold for feature selection.')
     parser.add_argument('--save_dir', type=str, default='./results/xgboost',

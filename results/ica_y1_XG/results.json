@@ -1,0 +1,76 @@
+{
+    "model_name": "ica",
+    "results": {
+        "train": {
+            "mse": 18685.726961280685,
+            "pearson_corr": 0.8603426785963437,
+            "pearson_corr_without_mean": 0.8601711727712777,
+            "conf_matrix": [
+                [
+                    448,
+                    70
+                ],
+                [
+                    87,
+                    395
+                ]
+            ],
+            "mean_value": -7.063886642456055,
+            "std_dev": 107.4043960571289,
+            "skewness": -0.014101901386289301,
+            "kurt": 1.8972899376968284,
+            "positive_count": 465,
+            "negative_count": 535
+        },
+        "val": {
+            "mse": 36969.821357916444,
+            "pearson_corr": 0.0619920582879096,
+            "pearson_corr_without_mean": 0.023850985160269674,
+            "conf_matrix": [
+                [
+                    31,
+                    13
+                ],
+                [
+                    38,
+                    18
+                ]
+            ],
+            "mean_value": -22.013856887817383,
+            "std_dev": 41.63778305053711,
+            "skewness": 0.18330867093897227,
+            "kurt": -0.4714013562622523,
+            "positive_count": 31,
+            "negative_count": 69
+        },
+        "test": {
+            "mse": 36969.821357916444,
+            "pearson_corr": 0.0619920582879096,
+            "pearson_corr_without_mean": 0.023850985160269674,
+            "conf_matrix": [
+                [
+                    31,
+                    13
+                ],
+                [
+                    38,
+                    18
+                ]
+            ],
+            "mean_value": -22.013856887817383,
+            "std_dev": 41.63778305053711,
+            "skewness": 0.18330867093897227,
+            "kurt": -0.4714013562622523,
+            "positive_count": 31,
+            "negative_count": 69
+        }
+    },
+    "args": {
+        "target_column": "y1",
+        "method": "ica",
+        "method_params": "configs/ica.json",
+        "regressor_name": "xgboost",
+        "regressor_params": "configs/xgboost.json",
+        "save_dir": "results/ica_y1_XG"
+    }
+}

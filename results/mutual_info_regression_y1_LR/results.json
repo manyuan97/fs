@@ -1,0 +1,76 @@
+{
+    "model_name": "linear_regression",
+    "results": {
+        "train": {
+            "mse": 3127.3231658237505,
+            "pearson_corr": 0.9308391966995467,
+            "pearson_corr_without_mean": 0.9308894570490537,
+            "conf_matrix": [
+                [
+                    466,
+                    56
+                ],
+                [
+                    52,
+                    426
+                ]
+            ],
+            "mean_value": -4.052316881325864,
+            "std_dev": 142.44853131799442,
+            "skewness": 0.08715308786859724,
+            "kurt": -0.21211899003880985,
+            "positive_count": 482,
+            "negative_count": 518
+        },
+        "val": {
+            "mse": 45419.22381341962,
+            "pearson_corr": -0.03360390972400124,
+            "pearson_corr_without_mean": -0.03407192934718321,
+            "conf_matrix": [
+                [
+                    28,
+                    21
+                ],
+                [
+                    29,
+                    22
+                ]
+            ],
+            "mean_value": -2.326277927137457,
+            "std_dev": 141.11666344899143,
+            "skewness": 0.5347780361360819,
+            "kurt": 0.3933971345018352,
+            "positive_count": 43,
+            "negative_count": 57
+        },
+        "test": {
+            "mse": 45419.22381341962,
+            "pearson_corr": -0.03360390972400124,
+            "pearson_corr_without_mean": -0.03407192934718321,
+            "conf_matrix": [
+                [
+                    28,
+                    21
+                ],
+                [
+                    29,
+                    22
+                ]
+            ],
+            "mean_value": -2.326277927137457,
+            "std_dev": 141.11666344899143,
+            "skewness": 0.5347780361360819,
+            "kurt": 0.3933971345018352,
+            "positive_count": 43,
+            "negative_count": 57
+        }
+    },
+    "args": {
+        "target_column": "y3",
+        "k": 100,
+        "feature_selection": "mutual_info_regression",
+        "save_dir": "results/mutual_info_regression_y1_LR",
+        "regressor_name": "linear_regression",
+        "regressor_params": "configs/linear_regression.json"
+    }
+}

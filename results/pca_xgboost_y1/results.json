@@ -1,0 +1,76 @@
+{
+    "model_name": "pca",
+    "results": {
+        "train": {
+            "mse": 2352.5296183510677,
+            "pearson_corr": 0.9929802916846311,
+            "pearson_corr_without_mean": 0.9929563034397021,
+            "conf_matrix": [
+                [
+                    505,
+                    13
+                ],
+                [
+                    24,
+                    458
+                ]
+            ],
+            "mean_value": -7.144742965698242,
+            "std_dev": 175.02450561523438,
+            "skewness": 0.12678363782589092,
+            "kurt": 0.2825016153297262,
+            "positive_count": 471,
+            "negative_count": 529
+        },
+        "val": {
+            "mse": 37876.69885865267,
+            "pearson_corr": 0.03528181336381211,
+            "pearson_corr_without_mean": 0.0073127268859396865,
+            "conf_matrix": [
+                [
+                    30,
+                    14
+                ],
+                [
+                    35,
+                    21
+                ]
+            ],
+            "mean_value": -20.408924102783203,
+            "std_dev": 49.333030700683594,
+            "skewness": 0.0265030596838369,
+            "kurt": -0.3510199544789785,
+            "positive_count": 35,
+            "negative_count": 65
+        },
+        "test": {
+            "mse": 37876.69885865267,
+            "pearson_corr": 0.03528181336381211,
+            "pearson_corr_without_mean": 0.0073127268859396865,
+            "conf_matrix": [
+                [
+                    30,
+                    14
+                ],
+                [
+                    35,
+                    21
+                ]
+            ],
+            "mean_value": -20.408924102783203,
+            "std_dev": 49.333030700683594,
+            "skewness": 0.0265030596838369,
+            "kurt": -0.3510199544789785,
+            "positive_count": 35,
+            "negative_count": 65
+        }
+    },
+    "args": {
+        "target_column": "y1",
+        "method": "pca",
+        "method_params": "configs/pca.json",
+        "regressor_name": "xgboost",
+        "regressor_params": "configs/xgboost.json",
+        "save_dir": "results/pca_xgboost_y1"
+    }
+}

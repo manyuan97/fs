@@ -1,0 +1,74 @@
+{
+    "model_name": "lasso",
+    "results": {
+        "train": {
+            "mse": 0.0010540185846755676,
+            "pearson_corr": 0.9999999916825237,
+            "pearson_corr_without_mean": 0.9999999916784151,
+            "conf_matrix": [
+                [
+                    522,
+                    0
+                ],
+                [
+                    0,
+                    478
+                ]
+            ],
+            "mean_value": -4.052316881325861,
+            "std_dev": 153.0065950517256,
+            "skewness": 0.09688321642066132,
+            "kurt": -0.09076950403144446,
+            "positive_count": 478,
+            "negative_count": 522
+        },
+        "val": {
+            "mse": 55133.22241045502,
+            "pearson_corr": -0.049290506203689126,
+            "pearson_corr_without_mean": -0.04861247398215494,
+            "conf_matrix": [
+                [
+                    28,
+                    21
+                ],
+                [
+                    30,
+                    21
+                ]
+            ],
+            "mean_value": 3.6869397440542273,
+            "std_dev": 169.00671847572212,
+            "skewness": 0.3348651315399841,
+            "kurt": -0.32218542612806145,
+            "positive_count": 42,
+            "negative_count": 58
+        },
+        "test": {
+            "mse": 55133.22241045502,
+            "pearson_corr": -0.049290506203689126,
+            "pearson_corr_without_mean": -0.04861247398215494,
+            "conf_matrix": [
+                [
+                    28,
+                    21
+                ],
+                [
+                    30,
+                    21
+                ]
+            ],
+            "mean_value": 3.6869397440542273,
+            "std_dev": 169.00671847572212,
+            "skewness": 0.3348651315399841,
+            "kurt": -0.32218542612806145,
+            "positive_count": 42,
+            "negative_count": 58
+        }
+    },
+    "args": {
+        "target_column": "y3",
+        "alpha": 0.01,
+        "precompute": true,
+        "save_dir": "results/lasso_0.01_y3"
+    }
+}

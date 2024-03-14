@@ -1,0 +1,76 @@
+{
+    "model_name": "pca",
+    "results": {
+        "train": {
+            "mse": 2005.1219289387795,
+            "pearson_corr": 0.9751477391492057,
+            "pearson_corr_without_mean": 0.9751674899317847,
+            "conf_matrix": [
+                [
+                    487,
+                    30
+                ],
+                [
+                    38,
+                    445
+                ]
+            ],
+            "mean_value": -5.663956826222446,
+            "std_dev": 197.08703994113856,
+            "skewness": 0.03696833235154877,
+            "kurt": -0.10339238556317021,
+            "positive_count": 475,
+            "negative_count": 525
+        },
+        "val": {
+            "mse": 43833.46351815212,
+            "pearson_corr": -0.007769240716917884,
+            "pearson_corr_without_mean": -0.007717970148511836,
+            "conf_matrix": [
+                [
+                    24,
+                    24
+                ],
+                [
+                    29,
+                    23
+                ]
+            ],
+            "mean_value": 0.5205776797404242,
+            "std_dev": 156.39001972489692,
+            "skewness": 0.19884590340067398,
+            "kurt": 0.08553627631598237,
+            "positive_count": 47,
+            "negative_count": 53
+        },
+        "test": {
+            "mse": 43833.46351815212,
+            "pearson_corr": -0.007769240716917884,
+            "pearson_corr_without_mean": -0.007717970148511836,
+            "conf_matrix": [
+                [
+                    24,
+                    24
+                ],
+                [
+                    29,
+                    23
+                ]
+            ],
+            "mean_value": 0.5205776797404242,
+            "std_dev": 156.39001972489692,
+            "skewness": 0.19884590340067398,
+            "kurt": 0.08553627631598237,
+            "positive_count": 47,
+            "negative_count": 53
+        }
+    },
+    "args": {
+        "target_column": "y2",
+        "method": "pca",
+        "method_params": "configs/pca.json",
+        "regressor_name": "linear_regression",
+        "regressor_params": "configs/linear_regression.json",
+        "save_dir": "results/pca_LR_y2"
+    }
+}

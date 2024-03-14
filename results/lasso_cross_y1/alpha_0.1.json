@@ -1,0 +1,68 @@
+{
+    "model_name": "lasso",
+    "results": {
+        "train": {
+            "mse": 0.10535976285508053,
+            "pearson_corr": 0.9999999031451077,
+            "pearson_corr_without_mean": 0.9999999021671924,
+            "conf_matrix": [
+                [
+                    518,
+                    0
+                ],
+                [
+                    0,
+                    482
+                ]
+            ],
+            "mean_value": -7.0998146238726605,
+            "std_dev": 217.34868948230687,
+            "skewness": 0.08143537880806617,
+            "kurt": 0.07450448841489088,
+            "positive_count": 482,
+            "negative_count": 518
+        },
+        "val": {
+            "mse": 105672.52944625124,
+            "pearson_corr": -0.13384821854666934,
+            "pearson_corr_without_mean": -0.13169005723440566,
+            "conf_matrix": [
+                [
+                    22,
+                    22
+                ],
+                [
+                    30,
+                    26
+                ]
+            ],
+            "mean_value": 6.6608063916534554,
+            "std_dev": 241.87449501452542,
+            "skewness": 0.23937694115303465,
+            "kurt": -0.3110446957588269,
+            "positive_count": 48,
+            "negative_count": 52
+        },
+        "test": {
+            "mse": 105672.52944625124,
+            "pearson_corr": -0.13384821854666934,
+            "pearson_corr_without_mean": -0.13169005723440566,
+            "conf_matrix": [
+                [
+                    22,
+                    22
+                ],
+                [
+                    30,
+                    26
+                ]
+            ],
+            "mean_value": 6.6608063916534554,
+            "std_dev": 241.87449501452542,
+            "skewness": 0.23937694115303465,
+            "kurt": -0.3110446957588269,
+            "positive_count": 48,
+            "negative_count": 52
+        }
+    }
+}
