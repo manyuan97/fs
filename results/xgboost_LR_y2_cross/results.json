@@ -1,0 +1,124 @@
+{
+    "model_name": "xgboost",
+    "results": {
+        "best_threshold": 0.030828310176730156,
+        "cross_result": [
+            {
+                "threshold": 0.0031046071089804173,
+                "n_features": 87,
+                "mse": 76585.49899272004
+            },
+            {
+                "threshold": 0.00622142618522048,
+                "n_features": 42,
+                "mse": 70479.73628288618
+            },
+            {
+                "threshold": 0.009272993542253971,
+                "n_features": 28,
+                "mse": 70562.8544539083
+            },
+            {
+                "threshold": 0.012369388714432716,
+                "n_features": 14,
+                "mse": 67874.29255803254
+            },
+            {
+                "threshold": 0.013946198858320713,
+                "n_features": 10,
+                "mse": 68330.8673244989
+            },
+            {
+                "threshold": 0.018494796007871628,
+                "n_features": 6,
+                "mse": 65434.64756232121
+            },
+            {
+                "threshold": 0.018833234906196594,
+                "n_features": 5,
+                "mse": 65347.80764638374
+            },
+            {
+                "threshold": 0.026880459859967232,
+                "n_features": 3,
+                "mse": 50502.38921755932
+            },
+            {
+                "threshold": 0.030828310176730156,
+                "n_features": 2,
+                "mse": 34012.132348261075
+            }
+        ],
+        "train": {
+            "mse": 32290.20901979605,
+            "pearson_corr": 0.457724256516374,
+            "pearson_corr_without_mean": 0.45840137420018795,
+            "conf_matrix": [
+                [
+                    330,
+                    187
+                ],
+                [
+                    178,
+                    305
+                ]
+            ],
+            "mean_value": -5.663956826222446,
+            "std_dev": 92.51061680641146,
+            "skewness": -0.08632741625243348,
+            "kurt": 0.0822714099441213,
+            "positive_count": 492,
+            "negative_count": 508
+        },
+        "validation": {
+            "mse": 34012.132348261075,
+            "pearson_corr": -0.04288244905820136,
+            "pearson_corr_without_mean": -0.04463265226439945,
+            "conf_matrix": [
+                [
+                    30,
+                    18
+                ],
+                [
+                    29,
+                    23
+                ]
+            ],
+            "mean_value": -17.0746585347729,
+            "std_dev": 115.08772197698099,
+            "skewness": 0.12765136493280188,
+            "kurt": -0.7981969912054763,
+            "positive_count": 41,
+            "negative_count": 59
+        },
+        "test": {
+            "mse": 34012.132348261075,
+            "pearson_corr": -0.04288244905820136,
+            "pearson_corr_without_mean": -0.04463265226439945,
+            "conf_matrix": [
+                [
+                    30,
+                    18
+                ],
+                [
+                    29,
+                    23
+                ]
+            ],
+            "mean_value": -17.0746585347729,
+            "std_dev": 115.08772197698099,
+            "skewness": 0.12765136493280188,
+            "kurt": -0.7981969912054763,
+            "positive_count": 41,
+            "negative_count": 59
+        }
+    },
+    "args": {
+        "target_column": "y2",
+        "model_name": "xgboost",
+        "save_dir": "results/xgboost_LR_y2_cross",
+        "regressor_name": "linear_regression",
+        "regressor_params": "configs/linear_regression.json",
+        "model_params": "configs/xgboost.json"
+    }
+}

@@ -1,0 +1,3 @@
+python run_model_cross_validation.py --target_column y1 --model_name xgboost --model_params configs/xgboost.json --regressor_name linear_regression --regressor_params configs/linear_regression.json --save_dir results/xgboost_LR_y1_cross
+python run_model_cross_validation.py --target_column y2 --model_name xgboost --model_params configs/xgboost.json --regressor_name linear_regression --regressor_params configs/linear_regression.json --save_dir results/xgboost_LR_y2_cross
+python run_model_cross_validation.py --target_column y3 --model_name xgboost --model_params configs/xgboost.json --regressor_name linear_regression --regressor_params configs/linear_regression.json --save_dir results/xgboost_LR_y3_cross
