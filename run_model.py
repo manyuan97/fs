@@ -48,6 +48,7 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
     # 评估模型
     model_evaluator = ModelEvaluator(regressor)
     metrics_train = model_evaluator.evaluate_model(X_train_selected, y_train)
+    metrics_train_positive = model_evaluator.evaluate_model(X_train_selected, y_train,filter_positive_pred=True)
 
     del X_train, y_train, X_train_selected
     gc.collect()
@@ -57,6 +58,8 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
     X_val_selected = selector.transform(X_val)
 
     metrics_val = model_evaluator.evaluate_model(X_val_selected, y_val)
+    metrics_val_positive = model_evaluator.evaluate_model(X_val_selected, y_val,filter_positive_pred=True)
+
 
     del X_val, y_val, X_val_selected
     gc.collect()
@@ -65,14 +68,21 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
     X_test_selected = selector.transform(X_test)
 
     metrics_test = model_evaluator.evaluate_model(X_test_selected, y_test)
+    metrics_test_positive = model_evaluator.evaluate_model(X_test_selected, y_test,filter_positive_pred=True)
+
 
     metrics = {
         'model_name': model_name,
         'results': {
             'train': metrics_train.__dict__,
             'val': metrics_val.__dict__,
-            'test': metrics_test.__dict__},
-        'args': args_dict
+            'test': metrics_test.__dict__,
+            'train_pos': metrics_train_positive.__dict__,
+            'val_pos': metrics_val_positive.__dict__,
+            'test_pos': metrics_test_positive.__dict__,
+        },
+        'args': args_dict,
+        'selected_features': selected_features.tolist(),
 
     }
 

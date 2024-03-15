@@ -19,10 +19,10 @@ class FeatureSelectorByK:
 
     @Utils.timeit
     def select_features(self, X_train, y_train):
-
         selector = SelectKBest(self.score_func, k=self.k)
         X_train_selected = selector.fit_transform(X_train, y_train)
-        return selector, X_train_selected
+        selected_features = selector.get_support()  # This will be a boolean array
+        return selector, X_train_selected, selected_features
 
 
 class FeatureSelectorByMethod:

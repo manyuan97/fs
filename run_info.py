@@ -9,6 +9,8 @@ from data_helper import DataProcessor
 from eval_helper import ModelEvaluator
 from model_helper import ModelTrainer, FeatureSelectorByK
 from result_helper import ResultSaver
+from util_helper import visualize_selected_features
+
 
 # Function to load parameters from a JSON file
 def load_params_from_file(file_path):
@@ -35,17 +37,26 @@ def main(target_column, k, feature_selection_method, regressor_name, regressor_p
     else:
         raise ValueError("Unsupported feature selection method")
 
-    selector, X_train_selected = feature_selector.select_features(X_train, y_train)
+    selector, X_train_selected ,selected_features= feature_selector.select_features(X_train, y_train)
+
+    visualize_path = os.path.join(save_dir, f'selected_features.png')
+    visualize_selected_features(selected_features, X_train.shape[1], visualize_path)
+
+
     model_trainer = ModelTrainer(model_name=regressor_name, params=regressor_params)
     regressor = model_trainer.train_model(X_train_selected, y_train)
     model_evaluator = ModelEvaluator(regressor)
     metrics_train = model_evaluator.evaluate_model(X_train_selected, y_train)
+    metrics_train_positive = model_evaluator.evaluate_model(X_train_selected, y_train,filter_positive_pred=True)
+
     del X_train, y_train, X_train_selected
     gc.collect()
 
     X_val, y_val, scaler = data_processor.load_and_preprocess_data(val_file_path, scaler=scaler)
     X_val_selected = selector.transform(X_val)
     metrics_val = model_evaluator.evaluate_model(X_val_selected, y_val)
+    metrics_val_positive = model_evaluator.evaluate_model(X_val_selected, y_val,filter_positive_pred=True)
+
 
     del X_val, y_val, X_val_selected
     gc.collect()
@@ -53,15 +64,22 @@ def main(target_column, k, feature_selection_method, regressor_name, regressor_p
     X_test, y_test, scaler = data_processor.load_and_preprocess_data(test_file_path, scaler=scaler)
     X_test_selected = selector.transform(X_test)
     metrics_test = model_evaluator.evaluate_model(X_test_selected, y_test)
+    metrics_test_positive = model_evaluator.evaluate_model(X_test_selected, y_test,filter_positive_pred=True)
+
 
     metrics = {
         'model_name': regressor_name,
         'results': {
             'train': metrics_train.__dict__,
             'val': metrics_val.__dict__,
-            'test': metrics_test.__dict__
+            'test': metrics_test.__dict__,
+            'train_pos': metrics_train_positive.__dict__,
+            'val_pos': metrics_val_positive.__dict__,
+            'test_pos': metrics_test_positive.__dict__,
         },
-        'args': args_dict
+        'args': args_dict,
+        'selected_features': selected_features.tolist(),
+
     }
 
     result_saver = ResultSaver()

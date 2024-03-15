@@ -37,11 +37,15 @@ def main(target_column, alpha, precompute, save_dir):
     # 评估模型
     model_evaluator = ModelEvaluator(lasso_model)
     metrics_train = model_evaluator.evaluate_model(X_train, y_train)
+    metrics_train_positive = model_evaluator.evaluate_model(X_train, y_train,filter_positive_pred=True)
+
     del X_train, y_train, X_train_selected
     gc.collect()
 
     X_val, y_val, scaler = data_processor.load_and_preprocess_data(val_file_path, scaler=scaler)
     metrics_val = model_evaluator.evaluate_model(X_val, y_val)
+    metrics_val_positive = model_evaluator.evaluate_model(X_val, y_val,filter_positive_pred=True)
+
 
     del X_val, y_val
     gc.collect()
@@ -51,12 +55,20 @@ def main(target_column, alpha, precompute, save_dir):
     # 初始化模型训练器
     metrics_test = model_evaluator.evaluate_model(X_test, y_test)
 
+    metrics_test_positive = model_evaluator.evaluate_model(X_test, y_test,filter_positive_pred=True)
+
+
     # 将评估结果转换为可保存的格式
     metrics = {'model_name': 'lasso',
                'results': {
                    'train': metrics_train.__dict__,
                    'val': metrics_val.__dict__,
-                   'test': metrics_test.__dict__},
+                   'test': metrics_test.__dict__,
+                   'train_pos': metrics_train_positive.__dict__,
+                   'val_pos': metrics_val_positive.__dict__,
+                   'test_pos': metrics_test_positive.__dict__,
+               },
+               'selected_features': selected_features.tolist(),
                'args': args_dict
                }
 
