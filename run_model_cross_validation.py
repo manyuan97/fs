@@ -65,10 +65,16 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
         mse = mean_squared_error(y_val, y_pred)
         print(f"Thresh={thresh:.3f}, n={select_X_train.shape[1]}, MSE: {mse:.2f}")
 
+        model_evaluator = ModelEvaluator(regressor)
+        metrics_train = model_evaluator.evaluate_model(select_X_train, y_train)
+        metrics_val = model_evaluator.evaluate_model(select_X_val, y_val)
+
         results.append({
             'threshold': thresh,
             'n_features': select_X_train.shape[1],
-            'mse': mse
+            'mse': mse,
+            'train_metrics': metrics_train.__dict__,
+            'val_metrics': metrics_val.__dict__
         })
 
         if mse < best_mse:

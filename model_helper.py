@@ -8,8 +8,242 @@ from sklearn.svm import LinearSVR
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import GradientBoostingRegressor, AdaBoostRegressor, RandomForestRegressor
 from lightgbm import LGBMRegressor
+import numpy as np
 
 from sklearn.feature_selection import SelectKBest
+from skfeature.function.information_theoretical_based.CIFE import cife
+from skfeature.function.information_theoretical_based.FCBF import fcbf
+from skfeature.function.information_theoretical_based.LCSI import lcsi
+from skfeature.function.information_theoretical_based.MRMR import mrmr
+from skfeature.function.information_theoretical_based.CMIM import cmim
+from skfeature.function.information_theoretical_based.ICAP import icap
+from skfeature.function.information_theoretical_based.MIFS import mifs
+from skfeature.function.information_theoretical_based.DISR import disr
+from skfeature.function.information_theoretical_based.JMI import jmi
+from skfeature.function.information_theoretical_based.MIM import mim
+
+
+
+class FeatureSelectorByMIM:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用MIM选择特征
+        F = mim(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+class FeatureSelectorByJMI:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用JMI选择特征
+        F = jmi(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+
+
+
+class FeatureSelectorByCIFE:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用CIFE选择特征
+        F = cife(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+
+class FeatureSelectorByFCBF:
+    def __init__(self, delta=0, n_selected_features=100):
+        self.delta = delta
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用FCBF选择特征
+        F = fcbf(X_train, y_train, delta=self.delta)
+        self.selected_indices = F  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+
+class FeatureSelectorByCMIM:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用CMIM选择特征
+        F = cmim(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+
+
+class FeatureSelectorByLCSI:
+    def __init__(self, beta=1.0, gamma=1.0, n_selected_features=100):
+        self.beta = beta
+        self.gamma = gamma
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用LCSI选择特征
+        F = lcsi(X_train, y_train, beta=self.beta, gamma=self.gamma, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+
+class FeatureSelectorByMRMR:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用MRMR选择特征
+        F = mrmr(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+
+class FeatureSelectorByICAP:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用ICAP选择特征
+        F = icap(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+class FeatureSelectorByMIFS:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用MIFS选择特征
+        F = mifs(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
+
+class FeatureSelectorByDISR:
+    def __init__(self, n_selected_features=100):
+        self.n_selected_features = n_selected_features
+        self.selected_indices = None  # 用于存储被选特征的索引
+
+    @Utils.timeit
+    def select_features(self, X_train, y_train):
+        # 使用DISR选择特征
+        F = disr(X_train, y_train, n_selected_features=self.n_selected_features)
+        self.selected_indices = F[0]  # 存储被选特征的索引
+        selected_features = np.zeros(X_train.shape[1], dtype=bool)
+        selected_features[F[0]] = True  # 标记被选特征为True
+        X_train_selected = X_train[:, F[0]]  # 选取被选特征
+        return None, X_train_selected, selected_features
+
+    def transform(self, X):
+        # 检查是否已进行了特征选择
+        if self.selected_indices is None:
+            raise ValueError("The select_features method must be called before transform.")
+        return X[:, self.selected_indices]  # 返回选取的特征
 
 class FeatureSelectorByK:
     def __init__(self, score_func, k=100):

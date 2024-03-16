@@ -2,13 +2,13 @@ import pandas as pd
 from sklearn.datasets import make_regression
 
 # 生成训练数据集
-X_train, y_train = make_regression(n_samples=1000, n_features=1246, n_targets=3, random_state=42)
+X_train, y_train = make_regression(n_samples=100, n_features=124, n_targets=3, random_state=42)
 
 # 生成验证数据集
-X_val, y_val = make_regression(n_samples=100, n_features=1246, n_targets=3, random_state=42)
+X_val, y_val = make_regression(n_samples=100, n_features=124, n_targets=3, random_state=42)
 
 # 生成测试数据集
-X_test, y_test = make_regression(n_samples=100, n_features=1246, n_targets=3, random_state=42)
+X_test, y_test = make_regression(n_samples=100, n_features=124, n_targets=3, random_state=42)
 
 # 将训练数据保存为 Parquet 文件
 train_df = pd.DataFrame(X_train, columns=[f'x{i}' for i in range(X_train.shape[1])])
