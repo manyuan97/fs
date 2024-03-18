@@ -29,14 +29,17 @@ def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, targe
 
     model_evaluator = ModelEvaluator(regressor)
     metrics = {
-        'train': model_evaluator.evaluate_model(X_train_selected, y_train).__dict__,
-        'val': model_evaluator.evaluate_model(selector.transform(X_val), y_val).__dict__,
-        'test': model_evaluator.evaluate_model(selector.transform(X_test), y_test).__dict__,
+        'results': {
+            'train': model_evaluator.evaluate_model(X_train_selected, y_train).__dict__,
+            'val': model_evaluator.evaluate_model(selector.transform(X_val), y_val).__dict__,
+            'test': model_evaluator.evaluate_model(selector.transform(X_test), y_test).__dict__,
 
-        'train_pos': model_evaluator.evaluate_model(X_train_selected, y_train, filter_positive_pred=True).__dict__,
-        'val_pos': model_evaluator.evaluate_model(selector.transform(X_val), y_val, filter_positive_pred=True).__dict__,
-        'test_pos': model_evaluator.evaluate_model(selector.transform(X_test), y_test,
-                                                   filter_positive_pred=True).__dict__,
+            'train_pos': model_evaluator.evaluate_model(X_train_selected, y_train, filter_positive_pred=True).__dict__,
+            'val_pos': model_evaluator.evaluate_model(selector.transform(X_val), y_val,
+                                                      filter_positive_pred=True).__dict__,
+            'test_pos': model_evaluator.evaluate_model(selector.transform(X_test), y_test,
+                                                       filter_positive_pred=True).__dict__,
+        },
         'selected_features': selected_features.tolist(),
         'k': k
     }

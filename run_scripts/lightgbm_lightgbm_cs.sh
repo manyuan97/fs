@@ -1,3 +1,3 @@
-python run_model_cross_validation.py --target_column y1 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name lightgbm --regressor_params configs/lightgbm.json --save_dir results/lightgbm_lightgbm_y1_cross
-python run_model_cross_validation.py --target_column y2 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name lightgbm --regressor_params configs/lightgbm.json --save_dir results/lightgbm_lightgbm_y2_cross
-python run_model_cross_validation.py --target_column y3 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name lightgbm --regressor_params configs/lightgbm.json --save_dir results/lightgbm_lightgbm_y3_cross
+python run_model_cross_validation.py --target_column y1 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name lightgbm --regressor_params configs/lightgbm.json --save_dir results/lightgbm_lightgbm_cross_y1
+python run_model_cross_validation.py --target_column y2 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name lightgbm --regressor_params configs/lightgbm.json --save_dir results/lightgbm_lightgbm_cross_y2
+python run_model_cross_validation.py --target_column y3 --model_name lightgbm --model_params configs/lightgbm.json --regressor_name lightgbm --regressor_params configs/lightgbm.json --save_dir results/lightgbm_lightgbm_cross_y3

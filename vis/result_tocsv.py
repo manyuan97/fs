@@ -2,7 +2,7 @@ import json
 import os
 import csv
 
-results_folder = './results'
+results_folder = '../results'
 
 csv_file_path = '../results_summary.csv'
 
@@ -19,6 +19,7 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as file:
                 with open(json_file_path, 'r', encoding='utf-8') as json_file:
                     data = json.load(json_file)
                     model_name = data.get('model_name', '')
+                    print(json_file_path)
                     for dataset_type in ('train', 'val', 'test', 'train_pos', 'val_pos', 'test_pos'):
                         results = data['results'].get(dataset_type, {})
                         csv_writer.writerow([

@@ -71,22 +71,29 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
         metrics_test_pos = model_evaluator.evaluate_model(select_X_test, y_test, filter_positive_pred=True)
 
         mse = metrics_val.__dict__['pearson_corr_without_mean']
-        print(f"Thresh={thresh:.3f}, n={select_X_train.shape[1]}, MSE: {mse:.2f}")
+        print(f"Thresh={thresh:.3f}, n={select_X_train.shape[1]}, pearson_corr_without_mean: {mse:.2f}")
 
         selected_features = selector.get_support()
 
-        results.append({
+        temp_metrics={
+
             'threshold': thresh,
             'n_features': select_X_train.shape[1],
             'pearson_corr_without_mean': mse,
+            'results': {
             'train': metrics_train.__dict__,
             'val': metrics_val.__dict__,
             'test': metrics_test.__dict__,
             'train_pos': metrics_train_pos.__dict__,
             'val_pos': metrics_val_pos.__dict__,
             'test_pos': metrics_test_pos.__dict__,
+            },
             'selected_features': selected_features.tolist(),
-        })
+        }
+
+        result_saver = ResultSaver()
+        json_file_path = os.path.join(save_dir, 'thre_{:.5f}.json'.format(thresh))
+        result_saver.save_metrics_as_json(temp_metrics, json_file_path)
 
         if mse > best_mse:
             best_mse = mse

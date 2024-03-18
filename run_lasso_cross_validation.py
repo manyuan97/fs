@@ -46,6 +46,7 @@ def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, targe
             'test_pos': metrics_test_positive.__dict__,
         },
         'selected_features': selected_features.tolist(),
+        'n_features': X_test_selected.shape[1],
     }
 
     return metrics
