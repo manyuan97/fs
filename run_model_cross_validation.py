@@ -120,7 +120,7 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
             'best_threshold': best_thresh,
             'cross_result': results,
             'train': metrics_train.__dict__,
-            'validation': metrics_val.__dict__,
+            'val': metrics_val.__dict__,
             'test': metrics_test.__dict__,
             'train_pos': metrics_train_positive.__dict__,
             'val_pos': metrics_val_positive.__dict__,
