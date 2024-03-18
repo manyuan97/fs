@@ -55,6 +55,87 @@
                     "neg_ratio": 0.53,
                     "pos_neg_ratio": 0.8867924528301886
                 },
+                "test": {
+                    "mse": 2.619908814504612e-25,
+                    "pearson_corr": 1.0,
+                    "pearson_corr_without_mean": 0.9999999999999999,
+                    "conf_matrix": [
+                        [
+                            0.53,
+                            0.0
+                        ],
+                        [
+                            0.0,
+                            0.47
+                        ]
+                    ],
+                    "mean_value": 7.793733775007695,
+                    "std_dev": 172.65814689408074,
+                    "skewness": 0.33404926974474053,
+                    "kurt": -0.06795913143876087,
+                    "vol": 172.83396071100626,
+                    "mean_over_vol": 0.04509376365007055,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "train_pos": {
+                    "mse": 2.6372589877903953e-25,
+                    "pearson_corr": 0.9999999999999999,
+                    "pearson_corr_without_mean": 1.0000000000000002,
+                    "conf_matrix": [
+                        [
+                            1.0
+                        ]
+                    ],
+                    "mean_value": 156.2101721446642,
+                    "std_dev": 114.34285183994358,
+                    "skewness": 0.9524852786073936,
+                    "kurt": 0.38599336841376397,
+                    "vol": 193.58694596577763,
+                    "mean_over_vol": 0.806925133124829,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 2.6372589877903953e-25,
+                    "pearson_corr": 0.9999999999999999,
+                    "pearson_corr_without_mean": 1.0000000000000002,
+                    "conf_matrix": [
+                        [
+                            1.0
+                        ]
+                    ],
+                    "mean_value": 156.2101721446642,
+                    "std_dev": 114.34285183994358,
+                    "skewness": 0.9524852786073936,
+                    "kurt": 0.38599336841376397,
+                    "vol": 193.58694596577763,
+                    "mean_over_vol": 0.806925133124829,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 2.6372589877903953e-25,
+                    "pearson_corr": 0.9999999999999999,
+                    "pearson_corr_without_mean": 1.0000000000000002,
+                    "conf_matrix": [
+                        [
+                            1.0
+                        ]
+                    ],
+                    "mean_value": 156.2101721446642,
+                    "std_dev": 114.34285183994358,
+                    "skewness": 0.9524852786073936,
+                    "kurt": 0.38599336841376397,
+                    "vol": 193.58694596577763,
+                    "mean_over_vol": 0.806925133124829,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     true,
                     true,
@@ -234,6 +315,102 @@
                     "neg_ratio": 0.52,
                     "pos_neg_ratio": 0.923076923076923
                 },
+                "test": {
+                    "mse": 2174.55106848063,
+                    "pearson_corr": 0.9628369599437013,
+                    "pearson_corr_without_mean": 0.9629139843411428,
+                    "conf_matrix": [
+                        [
+                            0.5,
+                            0.03
+                        ],
+                        [
+                            0.02,
+                            0.45
+                        ]
+                    ],
+                    "mean_value": 7.793733775007698,
+                    "std_dev": 166.24164526500974,
+                    "skewness": 0.3405745793312679,
+                    "kurt": -0.1363007424996221,
+                    "vol": 166.42423773769562,
+                    "mean_over_vol": 0.04683052108846999,
+                    "pos_ratio": 0.48,
+                    "neg_ratio": 0.52,
+                    "pos_neg_ratio": 0.923076923076923
+                },
+                "train_pos": {
+                    "mse": 2522.037141905757,
+                    "pearson_corr": 0.9175907825502166,
+                    "pearson_corr_without_mean": 0.9650949783327234,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0625
+                        ],
+                        [
+                            0.0,
+                            0.9375
+                        ]
+                    ],
+                    "mean_value": 150.1238771911799,
+                    "std_dev": 106.67507207405033,
+                    "skewness": 1.1137961998828572,
+                    "kurt": 0.8297840168969688,
+                    "vol": 184.1650061898739,
+                    "mean_over_vol": 0.8151596239537622,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 2522.037141905757,
+                    "pearson_corr": 0.9175907825502166,
+                    "pearson_corr_without_mean": 0.9650949783327234,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0625
+                        ],
+                        [
+                            0.0,
+                            0.9375
+                        ]
+                    ],
+                    "mean_value": 150.1238771911799,
+                    "std_dev": 106.67507207405033,
+                    "skewness": 1.1137961998828572,
+                    "kurt": 0.8297840168969688,
+                    "vol": 184.1650061898739,
+                    "mean_over_vol": 0.8151596239537622,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 2522.037141905757,
+                    "pearson_corr": 0.9175907825502166,
+                    "pearson_corr_without_mean": 0.9650949783327234,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0625
+                        ],
+                        [
+                            0.0,
+                            0.9375
+                        ]
+                    ],
+                    "mean_value": 150.1238771911799,
+                    "std_dev": 106.67507207405033,
+                    "skewness": 1.1137961998828572,
+                    "kurt": 0.8297840168969688,
+                    "vol": 184.1650061898739,
+                    "mean_over_vol": 0.8151596239537622,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -362,6 +539,281 @@
                 ]
             },
             {
+                "threshold": 0.027778952568769458,
+                "n_features": 14,
+                "pearson_corr_without_mean": 0.8735036258186207,
+                "train": {
+                    "mse": 7079.307552954944,
+                    "pearson_corr": 0.873227171346128,
+                    "pearson_corr_without_mean": 0.8735036258186207,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007702,
+                    "std_dev": 150.7697852221823,
+                    "skewness": 0.4653157173429158,
+                    "kurt": 0.5940839250684853,
+                    "vol": 150.97109134565687,
+                    "mean_over_vol": 0.05162401427676976,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "val": {
+                    "mse": 7079.307552954944,
+                    "pearson_corr": 0.873227171346128,
+                    "pearson_corr_without_mean": 0.8735036258186207,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007702,
+                    "std_dev": 150.7697852221823,
+                    "skewness": 0.4653157173429158,
+                    "kurt": 0.5940839250684853,
+                    "vol": 150.97109134565687,
+                    "mean_over_vol": 0.05162401427676976,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "test": {
+                    "mse": 7079.307552954944,
+                    "pearson_corr": 0.873227171346128,
+                    "pearson_corr_without_mean": 0.8735036258186207,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007702,
+                    "std_dev": 150.7697852221823,
+                    "skewness": 0.4653157173429158,
+                    "kurt": 0.5940839250684853,
+                    "vol": 150.97109134565687,
+                    "mean_over_vol": 0.05162401427676976,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "train_pos": {
+                    "mse": 6535.667956301385,
+                    "pearson_corr": 0.7997126007136945,
+                    "pearson_corr_without_mean": 0.9058632624553793,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.1276595744680851
+                        ],
+                        [
+                            0.0,
+                            0.8723404255319149
+                        ]
+                    ],
+                    "mean_value": 132.06341632937742,
+                    "std_dev": 110.01167191621958,
+                    "skewness": 1.178122775657111,
+                    "kurt": 0.9885801673095815,
+                    "vol": 171.88168573291458,
+                    "mean_over_vol": 0.7683390802589032,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 6535.667956301385,
+                    "pearson_corr": 0.7997126007136945,
+                    "pearson_corr_without_mean": 0.9058632624553793,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.1276595744680851
+                        ],
+                        [
+                            0.0,
+                            0.8723404255319149
+                        ]
+                    ],
+                    "mean_value": 132.06341632937742,
+                    "std_dev": 110.01167191621958,
+                    "skewness": 1.178122775657111,
+                    "kurt": 0.9885801673095815,
+                    "vol": 171.88168573291458,
+                    "mean_over_vol": 0.7683390802589032,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 6535.667956301385,
+                    "pearson_corr": 0.7997126007136945,
+                    "pearson_corr_without_mean": 0.9058632624553793,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.1276595744680851
+                        ],
+                        [
+                            0.0,
+                            0.8723404255319149
+                        ]
+                    ],
+                    "mean_value": 132.06341632937742,
+                    "std_dev": 110.01167191621958,
+                    "skewness": 1.178122775657111,
+                    "kurt": 0.9885801673095815,
+                    "vol": 171.88168573291458,
+                    "mean_over_vol": 0.7683390802589032,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "selected_features": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true
+                ]
+            },
+            {
                 "threshold": 0.0088889729231596,
                 "n_features": 27,
                 "pearson_corr_without_mean": 0.9239530318903001,
@@ -412,6 +864,102 @@
                     "pos_ratio": 0.47,
                     "neg_ratio": 0.53,
                     "pos_neg_ratio": 0.8867924528301886
+                },
+                "test": {
+                    "mse": 4370.53431727414,
+                    "pearson_corr": 0.9237916884242893,
+                    "pearson_corr_without_mean": 0.9239530318903001,
+                    "conf_matrix": [
+                        [
+                            0.51,
+                            0.02
+                        ],
+                        [
+                            0.02,
+                            0.45
+                        ]
+                    ],
+                    "mean_value": 7.793733775007699,
+                    "std_dev": 159.50016103949173,
+                    "skewness": 0.36772871800323886,
+                    "kurt": 0.2516090429265345,
+                    "vol": 159.69046201254318,
+                    "mean_over_vol": 0.048805255347032096,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "train_pos": {
+                    "mse": 4227.428306064766,
+                    "pearson_corr": 0.8432212465896666,
+                    "pearson_corr_without_mean": 0.9417227421299705,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0425531914893617
+                        ],
+                        [
+                            0.0,
+                            0.9574468085106383
+                        ]
+                    ],
+                    "mean_value": 145.789164749467,
+                    "std_dev": 105.23423983076877,
+                    "skewness": 1.209272672837007,
+                    "kurt": 1.832726531055167,
+                    "vol": 179.80190708417692,
+                    "mean_over_vol": 0.8108321380663313,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 4227.428306064766,
+                    "pearson_corr": 0.8432212465896666,
+                    "pearson_corr_without_mean": 0.9417227421299705,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0425531914893617
+                        ],
+                        [
+                            0.0,
+                            0.9574468085106383
+                        ]
+                    ],
+                    "mean_value": 145.789164749467,
+                    "std_dev": 105.23423983076877,
+                    "skewness": 1.209272672837007,
+                    "kurt": 1.832726531055167,
+                    "vol": 179.80190708417692,
+                    "mean_over_vol": 0.8108321380663313,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 4227.428306064766,
+                    "pearson_corr": 0.8432212465896666,
+                    "pearson_corr_without_mean": 0.9417227421299705,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0425531914893617
+                        ],
+                        [
+                            0.0,
+                            0.9574468085106383
+                        ]
+                    ],
+                    "mean_value": 145.789164749467,
+                    "std_dev": 105.23423983076877,
+                    "skewness": 1.209272672837007,
+                    "kurt": 1.832726531055167,
+                    "vol": 179.80190708417692,
+                    "mean_over_vol": 0.8108321380663313,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
                 },
                 "selected_features": [
                     false,
@@ -592,6 +1140,102 @@
                     "neg_ratio": 0.54,
                     "pos_neg_ratio": 0.8518518518518519
                 },
+                "test": {
+                    "mse": 4769.833048267552,
+                    "pearson_corr": 0.9165133210817273,
+                    "pearson_corr_without_mean": 0.9166908017971458,
+                    "conf_matrix": [
+                        [
+                            0.51,
+                            0.02
+                        ],
+                        [
+                            0.03,
+                            0.44
+                        ]
+                    ],
+                    "mean_value": 7.793733775007694,
+                    "std_dev": 158.24349162171066,
+                    "skewness": 0.32900385414413735,
+                    "kurt": 0.4470524207221409,
+                    "vol": 158.4353020219487,
+                    "mean_over_vol": 0.049191901524118634,
+                    "pos_ratio": 0.46,
+                    "neg_ratio": 0.54,
+                    "pos_neg_ratio": 0.8518518518518519
+                },
+                "train_pos": {
+                    "mse": 4279.228747368887,
+                    "pearson_corr": 0.8441306681901516,
+                    "pearson_corr_without_mean": 0.9421182231688382,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.043478260869565216
+                        ],
+                        [
+                            0.0,
+                            0.9565217391304348
+                        ]
+                    ],
+                    "mean_value": 145.93693604323363,
+                    "std_dev": 104.69903779122289,
+                    "skewness": 1.269972524240421,
+                    "kurt": 1.9627167782212789,
+                    "vol": 179.60923644427302,
+                    "mean_over_vol": 0.8125246726301472,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 4279.228747368887,
+                    "pearson_corr": 0.8441306681901516,
+                    "pearson_corr_without_mean": 0.9421182231688382,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.043478260869565216
+                        ],
+                        [
+                            0.0,
+                            0.9565217391304348
+                        ]
+                    ],
+                    "mean_value": 145.93693604323363,
+                    "std_dev": 104.69903779122289,
+                    "skewness": 1.269972524240421,
+                    "kurt": 1.9627167782212789,
+                    "vol": 179.60923644427302,
+                    "mean_over_vol": 0.8125246726301472,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 4279.228747368887,
+                    "pearson_corr": 0.8441306681901516,
+                    "pearson_corr_without_mean": 0.9421182231688382,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.043478260869565216
+                        ],
+                        [
+                            0.0,
+                            0.9565217391304348
+                        ]
+                    ],
+                    "mean_value": 145.93693604323363,
+                    "std_dev": 104.69903779122289,
+                    "skewness": 1.269972524240421,
+                    "kurt": 1.9627167782212789,
+                    "vol": 179.60923644427302,
+                    "mean_over_vol": 0.8125246726301472,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -770,6 +1414,102 @@
                     "pos_ratio": 0.5,
                     "neg_ratio": 0.5,
                     "pos_neg_ratio": 1.0
+                },
+                "test": {
+                    "mse": 5555.035085085922,
+                    "pearson_corr": 0.9020294803829534,
+                    "pearson_corr_without_mean": 0.902239492495251,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.03,
+                            0.44
+                        ]
+                    ],
+                    "mean_value": 7.7937337750076905,
+                    "std_dev": 155.7427385267513,
+                    "skewness": 0.38822685956266156,
+                    "kurt": 0.6295860806323752,
+                    "vol": 155.93762499784242,
+                    "mean_over_vol": 0.049979815808503726,
+                    "pos_ratio": 0.5,
+                    "neg_ratio": 0.5,
+                    "pos_neg_ratio": 1.0
+                },
+                "train_pos": {
+                    "mse": 5193.399890490442,
+                    "pearson_corr": 0.834841694240106,
+                    "pearson_corr_without_mean": 0.9239116523816998,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.12
+                        ],
+                        [
+                            0.0,
+                            0.88
+                        ]
+                    ],
+                    "mean_value": 129.9765745046807,
+                    "std_dev": 109.315408971917,
+                    "skewness": 1.3768661484753002,
+                    "kurt": 1.7390223044977304,
+                    "vol": 169.83453288029585,
+                    "mean_over_vol": 0.7653129920067072,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 5193.399890490442,
+                    "pearson_corr": 0.834841694240106,
+                    "pearson_corr_without_mean": 0.9239116523816998,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.12
+                        ],
+                        [
+                            0.0,
+                            0.88
+                        ]
+                    ],
+                    "mean_value": 129.9765745046807,
+                    "std_dev": 109.315408971917,
+                    "skewness": 1.3768661484753002,
+                    "kurt": 1.7390223044977304,
+                    "vol": 169.83453288029585,
+                    "mean_over_vol": 0.7653129920067072,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 5193.399890490442,
+                    "pearson_corr": 0.834841694240106,
+                    "pearson_corr_without_mean": 0.9239116523816998,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.12
+                        ],
+                        [
+                            0.0,
+                            0.88
+                        ]
+                    ],
+                    "mean_value": 129.9765745046807,
+                    "std_dev": 109.315408971917,
+                    "skewness": 1.3768661484753002,
+                    "kurt": 1.7390223044977304,
+                    "vol": 169.83453288029585,
+                    "mean_over_vol": 0.7653129920067072,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
                 },
                 "selected_features": [
                     false,
@@ -950,6 +1690,102 @@
                     "neg_ratio": 0.53,
                     "pos_neg_ratio": 0.8867924528301886
                 },
+                "test": {
+                    "mse": 7029.899667553757,
+                    "pearson_corr": 0.8741756533229482,
+                    "pearson_corr_without_mean": 0.8744498809012984,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007694,
+                    "std_dev": 150.93354836266263,
+                    "skewness": 0.4616423183759105,
+                    "kurt": 0.5860330162654299,
+                    "vol": 151.1346363594392,
+                    "mean_over_vol": 0.05156815117133096,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "train_pos": {
+                    "mse": 6756.764014316163,
+                    "pearson_corr": 0.7922216521477451,
+                    "pearson_corr_without_mean": 0.9024920017390498,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.1276595744680851
+                        ],
+                        [
+                            0.0,
+                            0.8723404255319149
+                        ]
+                    ],
+                    "mean_value": 132.2014695093565,
+                    "std_dev": 110.0640542660193,
+                    "skewness": 1.1623892671065068,
+                    "kurt": 1.0317043844219507,
+                    "vol": 172.0212910715024,
+                    "mean_over_vol": 0.7685180635832203,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 6756.764014316163,
+                    "pearson_corr": 0.7922216521477451,
+                    "pearson_corr_without_mean": 0.9024920017390498,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.1276595744680851
+                        ],
+                        [
+                            0.0,
+                            0.8723404255319149
+                        ]
+                    ],
+                    "mean_value": 132.2014695093565,
+                    "std_dev": 110.0640542660193,
+                    "skewness": 1.1623892671065068,
+                    "kurt": 1.0317043844219507,
+                    "vol": 172.0212910715024,
+                    "mean_over_vol": 0.7685180635832203,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 6756.764014316163,
+                    "pearson_corr": 0.7922216521477451,
+                    "pearson_corr_without_mean": 0.9024920017390498,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.1276595744680851
+                        ],
+                        [
+                            0.0,
+                            0.8723404255319149
+                        ]
+                    ],
+                    "mean_value": 132.2014695093565,
+                    "std_dev": 110.0640542660193,
+                    "skewness": 1.1623892671065068,
+                    "kurt": 1.0317043844219507,
+                    "vol": 172.0212910715024,
+                    "mean_over_vol": 0.7685180635832203,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -1129,6 +1965,102 @@
                     "neg_ratio": 0.55,
                     "pos_neg_ratio": 0.8181818181818181
                 },
+                "test": {
+                    "mse": 7979.673752709188,
+                    "pearson_corr": 0.8557587533939915,
+                    "pearson_corr_without_mean": 0.8560767203077015,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.08,
+                            0.39
+                        ]
+                    ],
+                    "mean_value": 7.793733775007691,
+                    "std_dev": 147.7537205493952,
+                    "skewness": 0.25480334799336496,
+                    "kurt": 0.5790599584435081,
+                    "vol": 147.95913024326842,
+                    "mean_over_vol": 0.05267490936310283,
+                    "pos_ratio": 0.45,
+                    "neg_ratio": 0.55,
+                    "pos_neg_ratio": 0.8181818181818181
+                },
+                "train_pos": {
+                    "mse": 8038.2136560995405,
+                    "pearson_corr": 0.7498028136911636,
+                    "pearson_corr_without_mean": 0.887102394059861,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.13333333333333333
+                        ],
+                        [
+                            0.0,
+                            0.8666666666666667
+                        ]
+                    ],
+                    "mean_value": 133.65180090299378,
+                    "std_dev": 103.1675109199899,
+                    "skewness": 1.0216764808596617,
+                    "kurt": 0.7115780384842196,
+                    "vol": 168.83820418980923,
+                    "mean_over_vol": 0.7915969110447383,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 8038.2136560995405,
+                    "pearson_corr": 0.7498028136911636,
+                    "pearson_corr_without_mean": 0.887102394059861,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.13333333333333333
+                        ],
+                        [
+                            0.0,
+                            0.8666666666666667
+                        ]
+                    ],
+                    "mean_value": 133.65180090299378,
+                    "std_dev": 103.1675109199899,
+                    "skewness": 1.0216764808596617,
+                    "kurt": 0.7115780384842196,
+                    "vol": 168.83820418980923,
+                    "mean_over_vol": 0.7915969110447383,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 8038.2136560995405,
+                    "pearson_corr": 0.7498028136911636,
+                    "pearson_corr_without_mean": 0.887102394059861,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.13333333333333333
+                        ],
+                        [
+                            0.0,
+                            0.8666666666666667
+                        ]
+                    ],
+                    "mean_value": 133.65180090299378,
+                    "std_dev": 103.1675109199899,
+                    "skewness": 1.0216764808596617,
+                    "kurt": 0.7115780384842196,
+                    "vol": 168.83820418980923,
+                    "mean_over_vol": 0.7915969110447383,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -1257,6 +2189,281 @@
                 ]
             },
             {
+                "threshold": 0.01851930171251297,
+                "n_features": 16,
+                "pearson_corr_without_mean": 0.874906988613569,
+                "train": {
+                    "mse": 7006.013024024745,
+                    "pearson_corr": 0.8746338358007454,
+                    "pearson_corr_without_mean": 0.874906988613569,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.05,
+                            0.42
+                        ]
+                    ],
+                    "mean_value": 7.793733775007688,
+                    "std_dev": 151.0126573002183,
+                    "skewness": 0.45323267704156955,
+                    "kurt": 0.6013720579091011,
+                    "vol": 151.21364009582229,
+                    "mean_over_vol": 0.05154120865068053,
+                    "pos_ratio": 0.48,
+                    "neg_ratio": 0.52,
+                    "pos_neg_ratio": 0.923076923076923
+                },
+                "val": {
+                    "mse": 7006.013024024745,
+                    "pearson_corr": 0.8746338358007454,
+                    "pearson_corr_without_mean": 0.874906988613569,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.05,
+                            0.42
+                        ]
+                    ],
+                    "mean_value": 7.793733775007688,
+                    "std_dev": 151.0126573002183,
+                    "skewness": 0.45323267704156955,
+                    "kurt": 0.6013720579091011,
+                    "vol": 151.21364009582229,
+                    "mean_over_vol": 0.05154120865068053,
+                    "pos_ratio": 0.48,
+                    "neg_ratio": 0.52,
+                    "pos_neg_ratio": 0.923076923076923
+                },
+                "test": {
+                    "mse": 7006.013024024745,
+                    "pearson_corr": 0.8746338358007454,
+                    "pearson_corr_without_mean": 0.874906988613569,
+                    "conf_matrix": [
+                        [
+                            0.47,
+                            0.06
+                        ],
+                        [
+                            0.05,
+                            0.42
+                        ]
+                    ],
+                    "mean_value": 7.793733775007688,
+                    "std_dev": 151.0126573002183,
+                    "skewness": 0.45323267704156955,
+                    "kurt": 0.6013720579091011,
+                    "vol": 151.21364009582229,
+                    "mean_over_vol": 0.05154120865068053,
+                    "pos_ratio": 0.48,
+                    "neg_ratio": 0.52,
+                    "pos_neg_ratio": 0.923076923076923
+                },
+                "train_pos": {
+                    "mse": 6602.501593530947,
+                    "pearson_corr": 0.7951592781286676,
+                    "pearson_corr_without_mean": 0.9028340837180083,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.125
+                        ],
+                        [
+                            0.0,
+                            0.875
+                        ]
+                    ],
+                    "mean_value": 129.47449417063572,
+                    "std_dev": 110.15768209845375,
+                    "skewness": 1.1949221256084925,
+                    "kurt": 1.074498956205991,
+                    "vol": 169.99517512578404,
+                    "mean_over_vol": 0.7616362880583759,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 6602.501593530947,
+                    "pearson_corr": 0.7951592781286676,
+                    "pearson_corr_without_mean": 0.9028340837180083,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.125
+                        ],
+                        [
+                            0.0,
+                            0.875
+                        ]
+                    ],
+                    "mean_value": 129.47449417063572,
+                    "std_dev": 110.15768209845375,
+                    "skewness": 1.1949221256084925,
+                    "kurt": 1.074498956205991,
+                    "vol": 169.99517512578404,
+                    "mean_over_vol": 0.7616362880583759,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 6602.501593530947,
+                    "pearson_corr": 0.7951592781286676,
+                    "pearson_corr_without_mean": 0.9028340837180083,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.125
+                        ],
+                        [
+                            0.0,
+                            0.875
+                        ]
+                    ],
+                    "mean_value": 129.47449417063572,
+                    "std_dev": 110.15768209845375,
+                    "skewness": 1.1949221256084925,
+                    "kurt": 1.074498956205991,
+                    "vol": 169.99517512578404,
+                    "mean_over_vol": 0.7616362880583759,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "selected_features": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true
+                ]
+            },
+            {
                 "threshold": 0.03602946177124977,
                 "n_features": 8,
                 "pearson_corr_without_mean": 0.8508206488656698,
@@ -1307,6 +2514,102 @@
                     "pos_ratio": 0.48,
                     "neg_ratio": 0.52,
                     "pos_neg_ratio": 0.923076923076923
+                },
+                "test": {
+                    "mse": 8247.668840440556,
+                    "pearson_corr": 0.8504899700147346,
+                    "pearson_corr_without_mean": 0.8508206488656698,
+                    "conf_matrix": [
+                        [
+                            0.46,
+                            0.07
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007698,
+                    "std_dev": 146.84402217474624,
+                    "skewness": 0.2571532974401208,
+                    "kurt": 0.4931589291163414,
+                    "vol": 147.05070259816188,
+                    "mean_over_vol": 0.053000316471151075,
+                    "pos_ratio": 0.48,
+                    "neg_ratio": 0.52,
+                    "pos_neg_ratio": 0.923076923076923
+                },
+                "train_pos": {
+                    "mse": 8023.953606780422,
+                    "pearson_corr": 0.743233636089897,
+                    "pearson_corr_without_mean": 0.8801900937155404,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.14583333333333334
+                        ],
+                        [
+                            0.0,
+                            0.8541666666666666
+                        ]
+                    ],
+                    "mean_value": 125.37579275658918,
+                    "std_dev": 102.20660964830584,
+                    "skewness": 1.1387419660901699,
+                    "kurt": 0.8643251970021302,
+                    "vol": 161.7568560066137,
+                    "mean_over_vol": 0.7750879675323498,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 8023.953606780422,
+                    "pearson_corr": 0.743233636089897,
+                    "pearson_corr_without_mean": 0.8801900937155404,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.14583333333333334
+                        ],
+                        [
+                            0.0,
+                            0.8541666666666666
+                        ]
+                    ],
+                    "mean_value": 125.37579275658918,
+                    "std_dev": 102.20660964830584,
+                    "skewness": 1.1387419660901699,
+                    "kurt": 0.8643251970021302,
+                    "vol": 161.7568560066137,
+                    "mean_over_vol": 0.7750879675323498,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 8023.953606780422,
+                    "pearson_corr": 0.743233636089897,
+                    "pearson_corr_without_mean": 0.8801900937155404,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.14583333333333334
+                        ],
+                        [
+                            0.0,
+                            0.8541666666666666
+                        ]
+                    ],
+                    "mean_value": 125.37579275658918,
+                    "std_dev": 102.20660964830584,
+                    "skewness": 1.1387419660901699,
+                    "kurt": 0.8643251970021302,
+                    "vol": 161.7568560066137,
+                    "mean_over_vol": 0.7750879675323498,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
                 },
                 "selected_features": [
                     false,
@@ -1487,6 +2790,102 @@
                     "neg_ratio": 0.51,
                     "pos_neg_ratio": 0.9607843137254901
                 },
+                "test": {
+                    "mse": 8647.6952073346,
+                    "pearson_corr": 0.8425641606294816,
+                    "pearson_corr_without_mean": 0.8429141348279974,
+                    "conf_matrix": [
+                        [
+                            0.45,
+                            0.08
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007688,
+                    "std_dev": 145.4755666136528,
+                    "skewness": 0.23887538020711147,
+                    "kurt": 0.5402055167312825,
+                    "vol": 145.68418846161387,
+                    "mean_over_vol": 0.05349745814770591,
+                    "pos_ratio": 0.49,
+                    "neg_ratio": 0.51,
+                    "pos_neg_ratio": 0.9607843137254901
+                },
+                "train_pos": {
+                    "mse": 8448.688880165835,
+                    "pearson_corr": 0.7404421283101968,
+                    "pearson_corr_without_mean": 0.8714772149576733,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.16326530612244897
+                        ],
+                        [
+                            0.0,
+                            0.8367346938775511
+                        ]
+                    ],
+                    "mean_value": 121.8295270088834,
+                    "std_dev": 100.53144573595365,
+                    "skewness": 1.2355078702157503,
+                    "kurt": 1.0228569675898704,
+                    "vol": 157.9525410779113,
+                    "mean_over_vol": 0.7713046347813427,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 8448.688880165835,
+                    "pearson_corr": 0.7404421283101968,
+                    "pearson_corr_without_mean": 0.8714772149576733,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.16326530612244897
+                        ],
+                        [
+                            0.0,
+                            0.8367346938775511
+                        ]
+                    ],
+                    "mean_value": 121.8295270088834,
+                    "std_dev": 100.53144573595365,
+                    "skewness": 1.2355078702157503,
+                    "kurt": 1.0228569675898704,
+                    "vol": 157.9525410779113,
+                    "mean_over_vol": 0.7713046347813427,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 8448.688880165835,
+                    "pearson_corr": 0.7404421283101968,
+                    "pearson_corr_without_mean": 0.8714772149576733,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.16326530612244897
+                        ],
+                        [
+                            0.0,
+                            0.8367346938775511
+                        ]
+                    ],
+                    "mean_value": 121.8295270088834,
+                    "std_dev": 100.53144573595365,
+                    "skewness": 1.2355078702157503,
+                    "kurt": 1.0228569675898704,
+                    "vol": 157.9525410779113,
+                    "mean_over_vol": 0.7713046347813427,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -1665,6 +3064,102 @@
                     "pos_ratio": 0.48,
                     "neg_ratio": 0.52,
                     "pos_neg_ratio": 0.923076923076923
+                },
+                "test": {
+                    "mse": 8664.891909809694,
+                    "pearson_corr": 0.8422217665074376,
+                    "pearson_corr_without_mean": 0.8425725790165718,
+                    "conf_matrix": [
+                        [
+                            0.46,
+                            0.07
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007695,
+                    "std_dev": 145.41644947903325,
+                    "skewness": 0.25365446944059483,
+                    "kurt": 0.5658627952326185,
+                    "vol": 145.6251560179213,
+                    "mean_over_vol": 0.05351914454978206,
+                    "pos_ratio": 0.48,
+                    "neg_ratio": 0.52,
+                    "pos_neg_ratio": 0.923076923076923
+                },
+                "train_pos": {
+                    "mse": 8643.903809963487,
+                    "pearson_corr": 0.7279329585041614,
+                    "pearson_corr_without_mean": 0.8708184311762042,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.14583333333333334
+                        ],
+                        [
+                            0.0,
+                            0.8541666666666666
+                        ]
+                    ],
+                    "mean_value": 124.1163711068197,
+                    "std_dev": 100.36200496975606,
+                    "skewness": 1.281218559286677,
+                    "kurt": 1.1201912661205098,
+                    "vol": 159.61643279523298,
+                    "mean_over_vol": 0.7775914355011603,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 8643.903809963487,
+                    "pearson_corr": 0.7279329585041614,
+                    "pearson_corr_without_mean": 0.8708184311762042,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.14583333333333334
+                        ],
+                        [
+                            0.0,
+                            0.8541666666666666
+                        ]
+                    ],
+                    "mean_value": 124.1163711068197,
+                    "std_dev": 100.36200496975606,
+                    "skewness": 1.281218559286677,
+                    "kurt": 1.1201912661205098,
+                    "vol": 159.61643279523298,
+                    "mean_over_vol": 0.7775914355011603,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 8643.903809963487,
+                    "pearson_corr": 0.7279329585041614,
+                    "pearson_corr_without_mean": 0.8708184311762042,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.14583333333333334
+                        ],
+                        [
+                            0.0,
+                            0.8541666666666666
+                        ]
+                    ],
+                    "mean_value": 124.1163711068197,
+                    "std_dev": 100.36200496975606,
+                    "skewness": 1.281218559286677,
+                    "kurt": 1.1201912661205098,
+                    "vol": 159.61643279523298,
+                    "mean_over_vol": 0.7775914355011603,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
                 },
                 "selected_features": [
                     false,
@@ -1845,6 +3340,102 @@
                     "neg_ratio": 0.49,
                     "pos_neg_ratio": 1.0408163265306123
                 },
+                "test": {
+                    "mse": 9061.437468127324,
+                    "pearson_corr": 0.8342873862529221,
+                    "pearson_corr_without_mean": 0.8346577375401576,
+                    "conf_matrix": [
+                        [
+                            0.43,
+                            0.1
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007695,
+                    "std_dev": 144.04651408753563,
+                    "skewness": 0.12202629553888034,
+                    "kurt": 0.5146579162893268,
+                    "vol": 144.25720261715287,
+                    "mean_over_vol": 0.05402665262885794,
+                    "pos_ratio": 0.51,
+                    "neg_ratio": 0.49,
+                    "pos_neg_ratio": 1.0408163265306123
+                },
+                "train_pos": {
+                    "mse": 8761.403272501173,
+                    "pearson_corr": 0.7322009517381707,
+                    "pearson_corr_without_mean": 0.8623121880493281,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.19607843137254902
+                        ],
+                        [
+                            0.0,
+                            0.803921568627451
+                        ]
+                    ],
+                    "mean_value": 116.17793531240785,
+                    "std_dev": 96.78506763441919,
+                    "skewness": 1.2135086876172512,
+                    "kurt": 0.9640496125475599,
+                    "vol": 151.21065428882025,
+                    "mean_over_vol": 0.7683184485830075,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 8761.403272501173,
+                    "pearson_corr": 0.7322009517381707,
+                    "pearson_corr_without_mean": 0.8623121880493281,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.19607843137254902
+                        ],
+                        [
+                            0.0,
+                            0.803921568627451
+                        ]
+                    ],
+                    "mean_value": 116.17793531240785,
+                    "std_dev": 96.78506763441919,
+                    "skewness": 1.2135086876172512,
+                    "kurt": 0.9640496125475599,
+                    "vol": 151.21065428882025,
+                    "mean_over_vol": 0.7683184485830075,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 8761.403272501173,
+                    "pearson_corr": 0.7322009517381707,
+                    "pearson_corr_without_mean": 0.8623121880493281,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.19607843137254902
+                        ],
+                        [
+                            0.0,
+                            0.803921568627451
+                        ]
+                    ],
+                    "mean_value": 116.17793531240785,
+                    "std_dev": 96.78506763441919,
+                    "skewness": 1.2135086876172512,
+                    "kurt": 0.9640496125475599,
+                    "vol": 151.21065428882025,
+                    "mean_over_vol": 0.7683184485830075,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -2023,6 +3614,102 @@
                     "pos_ratio": 0.5,
                     "neg_ratio": 0.5,
                     "pos_neg_ratio": 1.0
+                },
+                "test": {
+                    "mse": 9065.88940746954,
+                    "pearson_corr": 0.8341978801369702,
+                    "pearson_corr_without_mean": 0.8345684530787445,
+                    "conf_matrix": [
+                        [
+                            0.44,
+                            0.09
+                        ],
+                        [
+                            0.06,
+                            0.41
+                        ]
+                    ],
+                    "mean_value": 7.793733775007692,
+                    "std_dev": 144.03106012741966,
+                    "skewness": 0.12492439852229609,
+                    "kurt": 0.4908941773042912,
+                    "vol": 144.2417712300569,
+                    "mean_over_vol": 0.05403243255088124,
+                    "pos_ratio": 0.5,
+                    "neg_ratio": 0.5,
+                    "pos_neg_ratio": 1.0
+                },
+                "train_pos": {
+                    "mse": 8912.897276962449,
+                    "pearson_corr": 0.7251245819557058,
+                    "pearson_corr_without_mean": 0.8626490175753975,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.18
+                        ],
+                        [
+                            0.0,
+                            0.82
+                        ]
+                    ],
+                    "mean_value": 118.64339337655251,
+                    "std_dev": 96.1157741808788,
+                    "skewness": 1.2214171475382656,
+                    "kurt": 0.9890745238546184,
+                    "vol": 152.69085381349163,
+                    "mean_over_vol": 0.7770170276306968,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 8912.897276962449,
+                    "pearson_corr": 0.7251245819557058,
+                    "pearson_corr_without_mean": 0.8626490175753975,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.18
+                        ],
+                        [
+                            0.0,
+                            0.82
+                        ]
+                    ],
+                    "mean_value": 118.64339337655251,
+                    "std_dev": 96.1157741808788,
+                    "skewness": 1.2214171475382656,
+                    "kurt": 0.9890745238546184,
+                    "vol": 152.69085381349163,
+                    "mean_over_vol": 0.7770170276306968,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 8912.897276962449,
+                    "pearson_corr": 0.7251245819557058,
+                    "pearson_corr_without_mean": 0.8626490175753975,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.18
+                        ],
+                        [
+                            0.0,
+                            0.82
+                        ]
+                    ],
+                    "mean_value": 118.64339337655251,
+                    "std_dev": 96.1157741808788,
+                    "skewness": 1.2214171475382656,
+                    "kurt": 0.9890745238546184,
+                    "vol": 152.69085381349163,
+                    "mean_over_vol": 0.7770170276306968,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
                 },
                 "selected_features": [
                     false,
@@ -2203,6 +3890,102 @@
                     "neg_ratio": 0.51,
                     "pos_neg_ratio": 0.9607843137254901
                 },
+                "test": {
+                    "mse": 15751.716992085689,
+                    "pearson_corr": 0.6867394137265886,
+                    "pearson_corr_without_mean": 0.6875212532145991,
+                    "conf_matrix": [
+                        [
+                            0.42,
+                            0.11
+                        ],
+                        [
+                            0.09,
+                            0.38
+                        ]
+                    ],
+                    "mean_value": 7.793733775007691,
+                    "std_dev": 118.57115457316016,
+                    "skewness": 0.019850937070146707,
+                    "kurt": -0.6273077979922337,
+                    "vol": 118.82702126607373,
+                    "mean_over_vol": 0.06558890134556354,
+                    "pos_ratio": 0.49,
+                    "neg_ratio": 0.51,
+                    "pos_neg_ratio": 0.9607843137254901
+                },
+                "train_pos": {
+                    "mse": 16982.85065787013,
+                    "pearson_corr": 0.43362963348857286,
+                    "pearson_corr_without_mean": 0.7143006701718552,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.22448979591836735
+                        ],
+                        [
+                            0.0,
+                            0.7755102040816326
+                        ]
+                    ],
+                    "mean_value": 107.82485400519602,
+                    "std_dev": 68.38260028800102,
+                    "skewness": 0.34555754347389683,
+                    "kurt": -1.0661469608431942,
+                    "vol": 127.68077053100185,
+                    "mean_over_vol": 0.8444878078098325,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 16982.85065787013,
+                    "pearson_corr": 0.43362963348857286,
+                    "pearson_corr_without_mean": 0.7143006701718552,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.22448979591836735
+                        ],
+                        [
+                            0.0,
+                            0.7755102040816326
+                        ]
+                    ],
+                    "mean_value": 107.82485400519602,
+                    "std_dev": 68.38260028800102,
+                    "skewness": 0.34555754347389683,
+                    "kurt": -1.0661469608431942,
+                    "vol": 127.68077053100185,
+                    "mean_over_vol": 0.8444878078098325,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 16982.85065787013,
+                    "pearson_corr": 0.43362963348857286,
+                    "pearson_corr_without_mean": 0.7143006701718552,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.22448979591836735
+                        ],
+                        [
+                            0.0,
+                            0.7755102040816326
+                        ]
+                    ],
+                    "mean_value": 107.82485400519602,
+                    "std_dev": 68.38260028800102,
+                    "skewness": 0.34555754347389683,
+                    "kurt": -1.0661469608431942,
+                    "vol": 127.68077053100185,
+                    "mean_over_vol": 0.8444878078098325,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -2382,6 +4165,102 @@
                     "neg_ratio": 0.48,
                     "pos_neg_ratio": 1.0833333333333335
                 },
+                "test": {
+                    "mse": 20980.983499202848,
+                    "pearson_corr": 0.5442389767389353,
+                    "pearson_corr_without_mean": 0.5455522084737281,
+                    "conf_matrix": [
+                        [
+                            0.35,
+                            0.18
+                        ],
+                        [
+                            0.13,
+                            0.34
+                        ]
+                    ],
+                    "mean_value": 7.793733775007691,
+                    "std_dev": 93.96729319127519,
+                    "skewness": 0.2049131034377014,
+                    "kurt": -0.3184658418583468,
+                    "vol": 94.28994896515094,
+                    "mean_over_vol": 0.08265710036483542,
+                    "pos_ratio": 0.52,
+                    "neg_ratio": 0.48,
+                    "pos_neg_ratio": 1.0833333333333335
+                },
+                "train_pos": {
+                    "mse": 22951.41024332244,
+                    "pearson_corr": 0.37663349403883867,
+                    "pearson_corr_without_mean": 0.5797053606955552,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.34615384615384615
+                        ],
+                        [
+                            0.0,
+                            0.6538461538461539
+                        ]
+                    ],
+                    "mean_value": 77.57284276769221,
+                    "std_dev": 65.46076873530842,
+                    "skewness": 0.5929418651429373,
+                    "kurt": -0.8734836010554532,
+                    "vol": 101.50201071150578,
+                    "mean_over_vol": 0.7642493210127012,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 22951.41024332244,
+                    "pearson_corr": 0.37663349403883867,
+                    "pearson_corr_without_mean": 0.5797053606955552,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.34615384615384615
+                        ],
+                        [
+                            0.0,
+                            0.6538461538461539
+                        ]
+                    ],
+                    "mean_value": 77.57284276769221,
+                    "std_dev": 65.46076873530842,
+                    "skewness": 0.5929418651429373,
+                    "kurt": -0.8734836010554532,
+                    "vol": 101.50201071150578,
+                    "mean_over_vol": 0.7642493210127012,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 22951.41024332244,
+                    "pearson_corr": 0.37663349403883867,
+                    "pearson_corr_without_mean": 0.5797053606955552,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.34615384615384615
+                        ],
+                        [
+                            0.0,
+                            0.6538461538461539
+                        ]
+                    ],
+                    "mean_value": 77.57284276769221,
+                    "std_dev": 65.46076873530842,
+                    "skewness": 0.5929418651429373,
+                    "kurt": -0.8734836010554532,
+                    "vol": 101.50201071150578,
+                    "mean_over_vol": 0.7642493210127012,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
                 "selected_features": [
                     false,
                     false,
@@ -2507,6 +4386,281 @@
                     false,
                     false,
                     false
+                ]
+            },
+            {
+                "threshold": 0.009259650856256485,
+                "n_features": 26,
+                "pearson_corr_without_mean": 0.9239357544214113,
+                "train": {
+                    "mse": 4371.488022395014,
+                    "pearson_corr": 0.9237743727268825,
+                    "pearson_corr_without_mean": 0.9239357544214113,
+                    "conf_matrix": [
+                        [
+                            0.51,
+                            0.02
+                        ],
+                        [
+                            0.02,
+                            0.45
+                        ]
+                    ],
+                    "mean_value": 7.7937337750076905,
+                    "std_dev": 159.49717134326528,
+                    "skewness": 0.36465699335925783,
+                    "kurt": 0.24969268691672886,
+                    "vol": 159.68747587916414,
+                    "mean_over_vol": 0.048806167998454844,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "val": {
+                    "mse": 4371.488022395014,
+                    "pearson_corr": 0.9237743727268825,
+                    "pearson_corr_without_mean": 0.9239357544214113,
+                    "conf_matrix": [
+                        [
+                            0.51,
+                            0.02
+                        ],
+                        [
+                            0.02,
+                            0.45
+                        ]
+                    ],
+                    "mean_value": 7.7937337750076905,
+                    "std_dev": 159.49717134326528,
+                    "skewness": 0.36465699335925783,
+                    "kurt": 0.24969268691672886,
+                    "vol": 159.68747587916414,
+                    "mean_over_vol": 0.048806167998454844,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "test": {
+                    "mse": 4371.488022395014,
+                    "pearson_corr": 0.9237743727268825,
+                    "pearson_corr_without_mean": 0.9239357544214113,
+                    "conf_matrix": [
+                        [
+                            0.51,
+                            0.02
+                        ],
+                        [
+                            0.02,
+                            0.45
+                        ]
+                    ],
+                    "mean_value": 7.7937337750076905,
+                    "std_dev": 159.49717134326528,
+                    "skewness": 0.36465699335925783,
+                    "kurt": 0.24969268691672886,
+                    "vol": 159.68747587916414,
+                    "mean_over_vol": 0.048806167998454844,
+                    "pos_ratio": 0.47,
+                    "neg_ratio": 0.53,
+                    "pos_neg_ratio": 0.8867924528301886
+                },
+                "train_pos": {
+                    "mse": 4205.756039073785,
+                    "pearson_corr": 0.8440278660994435,
+                    "pearson_corr_without_mean": 0.9420389038857605,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0425531914893617
+                        ],
+                        [
+                            0.0,
+                            0.9574468085106383
+                        ]
+                    ],
+                    "mean_value": 145.81028967530077,
+                    "std_dev": 105.09263812336886,
+                    "skewness": 1.2094963090516846,
+                    "kurt": 1.845210653053421,
+                    "vol": 179.73620437442335,
+                    "mean_over_vol": 0.8112460713343612,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "val_pos": {
+                    "mse": 4205.756039073785,
+                    "pearson_corr": 0.8440278660994435,
+                    "pearson_corr_without_mean": 0.9420389038857605,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0425531914893617
+                        ],
+                        [
+                            0.0,
+                            0.9574468085106383
+                        ]
+                    ],
+                    "mean_value": 145.81028967530077,
+                    "std_dev": 105.09263812336886,
+                    "skewness": 1.2094963090516846,
+                    "kurt": 1.845210653053421,
+                    "vol": 179.73620437442335,
+                    "mean_over_vol": 0.8112460713343612,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "test_pos": {
+                    "mse": 4205.756039073785,
+                    "pearson_corr": 0.8440278660994435,
+                    "pearson_corr_without_mean": 0.9420389038857605,
+                    "conf_matrix": [
+                        [
+                            0.0,
+                            0.0425531914893617
+                        ],
+                        [
+                            0.0,
+                            0.9574468085106383
+                        ]
+                    ],
+                    "mean_value": 145.81028967530077,
+                    "std_dev": 105.09263812336886,
+                    "skewness": 1.2094963090516846,
+                    "kurt": 1.845210653053421,
+                    "vol": 179.73620437442335,
+                    "mean_over_vol": 0.8112460713343612,
+                    "pos_ratio": 1.0,
+                    "neg_ratio": 0.0,
+                    "pos_neg_ratio": Infinity
+                },
+                "selected_features": [
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    true,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    false,
+                    true,
+                    true
                 ]
             }
         ],

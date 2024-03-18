@@ -33,7 +33,7 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
 
     split_points = np.linspace(start=thresholds[0], stop=thresholds[-1], num=21)
 
-    selected_thresholds = [split_points[0]]
+    selected_thresholds = [split_points[0],split_points[2],split_points[4],split_points[6]]
     for i in range(len(split_points) - 1):
         current_interval_thresholds = thresholds[(thresholds >= split_points[i]) & (thresholds < split_points[i + 1])]
         if len(current_interval_thresholds) > 0:
@@ -49,7 +49,7 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
     best_X_selected = None
     best_selected_feature = None
 
-    for thresh in selected_thresholds:
+    for thresh in set(selected_thresholds):
 
         feature_selector = FeatureSelectorByModel(xgboost_model)
         selector, X_train_selected, _ = feature_selector.select_features(X_train, threshold=thresh, prefit=True)
