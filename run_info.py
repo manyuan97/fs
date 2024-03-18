@@ -5,11 +5,11 @@ import os
 
 from sklearn.feature_selection import mutual_info_regression, f_regression
 
-from data_helper import DataProcessor
-from eval_helper import ModelEvaluator
-from model_helper import ModelTrainer, FeatureSelectorByK
-from result_helper import ResultSaver
-from util_helper import visualize_selected_features
+from core.data_helper import DataProcessor
+from core.eval_helper import ModelEvaluator
+from core.model_helper import ModelTrainer, FeatureSelectorByK
+from core.result_helper import ResultSaver
+from core.util_helper import visualize_selected_features
 
 
 # Function to load parameters from a JSON file
@@ -24,9 +24,9 @@ def main(target_column, k, feature_selection_method, regressor_name, regressor_p
     # Load regressor parameters from a JSON file
     regressor_params = load_params_from_file(regressor_params_path)
 
-    train_file_path = './train.parquet'
-    val_file_path = './val.parquet'
-    test_file_path = './test.parquet'
+    train_file_path = 'data/train.parquet'
+    val_file_path = 'data/val.parquet'
+    test_file_path = 'data/test.parquet'
 
     # Load and preprocess data
     X_train, y_train, scaler = data_processor.load_and_preprocess_data(train_file_path)

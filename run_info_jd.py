@@ -1,20 +1,15 @@
 import argparse
 import gc
-import json
-import numpy as np
 import os
 
-# 假设以下类已经根据之前的描述被正确实现
-from data_helper import DataProcessor
-from eval_helper import ModelEvaluator
-from model_helper import ModelTrainer
-from result_helper import ResultSaver
-from util_helper import visualize_selected_features, load_params_from_file
+from core.data_helper import DataProcessor
+from core.eval_helper import ModelEvaluator
+from core.result_helper import ResultSaver
+from core.util_helper import visualize_selected_features, load_params_from_file
 from sklearn.feature_selection import mutual_info_regression, f_regression
 
 
-# 特征选择类也需要被实现
-from model_helper import * # 假设FeatureSelectorByCIFE已经被实现
+from core.model_helper import *
 
 
 def main(target_column, k, feature_selection_method, regressor_name, regressor_params_path, save_dir):
@@ -23,9 +18,9 @@ def main(target_column, k, feature_selection_method, regressor_name, regressor_p
 
     regressor_params = load_params_from_file(regressor_params_path)
 
-    train_file_path = './train.parquet'
-    val_file_path = './val.parquet'
-    test_file_path = './test.parquet'
+    train_file_path = 'data/train.parquet'
+    val_file_path = 'data/val.parquet'
+    test_file_path = 'data/test.parquet'
 
     # 加载和预处理数据
     X_train, y_train, scaler = data_processor.load_and_preprocess_data(train_file_path)
@@ -113,10 +108,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Train and evaluate models with feature selection.')
     parser.add_argument('--target_column', type=str, default='y1', help='The target column for prediction.')
     parser.add_argument('--k', type=int, default=100, help='The number of top features to select.')
-    # parser.add_argument('--feature_selection', type=str, default='f_regression',
-    #                     choices=['mutual_info_regression', 'f_regression'], help='The feature selection method to use.')
-    # parser.add_argument('--save_dir', type=str, default='results/f_regression',
-    #                     help='The file path where the metrics JSON will be saved.')
     parser.add_argument('--feature_selection', type=str, default='mim',
                         choices=[
                             'mutual_info_regression', 'f_regression', 'cife',

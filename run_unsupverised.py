@@ -2,11 +2,11 @@ import argparse
 import gc
 import os
 
-from data_helper import DataProcessor
-from eval_helper import ModelEvaluator
-from model_helper import ModelTrainer, FeatureSelectorByMethod
-from result_helper import ResultSaver
-from util_helper import load_params_from_file
+from core.data_helper import DataProcessor
+from core.eval_helper import ModelEvaluator
+from core.model_helper import ModelTrainer, FeatureSelectorByMethod
+from core.result_helper import ResultSaver
+from core.util_helper import load_params_from_file
 
 
 
@@ -17,9 +17,9 @@ def main(target_column, method, method_params_path, regressor_name, regressor_pa
     method_params = load_params_from_file(method_params_path)
     regressor_params = load_params_from_file(regressor_params_path)
 
-    train_file_path = './train.parquet'
-    val_file_path = './val.parquet'
-    test_file_path = './test.parquet'
+    train_file_path = 'data/train.parquet'
+    val_file_path = 'data/val.parquet'
+    test_file_path = 'data/test.parquet'
 
 
     # 加载和预处理数据

@@ -1,10 +1,10 @@
 {
-    "model_name": "lasso",
+    "model_name": "linear_regression",
     "results": {
         "train": {
-            "mse": 0.022830268879297674,
-            "pearson_corr": 0.999999644857237,
-            "pearson_corr_without_mean": 0.9999996455230079,
+            "mse": 1.0386975961774787e-25,
+            "pearson_corr": 1.0,
+            "pearson_corr_without_mean": 1.0000000000000002,
             "conf_matrix": [
                 [
                     0.53,
@@ -15,20 +15,20 @@
                     0.47
                 ]
             ],
-            "mean_value": 7.793733775007695,
-            "std_dev": 172.61739076620563,
-            "skewness": 0.33440967385761167,
-            "kurt": -0.06830472242133334,
-            "vol": 172.79324605171533,
-            "mean_over_vol": 0.04510438893355303,
+            "mean_value": 7.793733775007699,
+            "std_dev": 172.65814689408057,
+            "skewness": 0.3340492697447387,
+            "kurt": -0.06795913143876087,
+            "vol": 172.8339607110061,
+            "mean_over_vol": 0.04509376365007061,
             "pos_ratio": 0.47,
             "neg_ratio": 0.53,
             "pos_neg_ratio": 0.8867924528301886
         },
         "val": {
-            "mse": 0.022830268879297674,
-            "pearson_corr": 0.999999644857237,
-            "pearson_corr_without_mean": 0.9999996455230079,
+            "mse": 1.0386975961774787e-25,
+            "pearson_corr": 1.0,
+            "pearson_corr_without_mean": 1.0000000000000002,
             "conf_matrix": [
                 [
                     0.53,
@@ -39,20 +39,20 @@
                     0.47
                 ]
             ],
-            "mean_value": 7.793733775007695,
-            "std_dev": 172.61739076620563,
-            "skewness": 0.33440967385761167,
-            "kurt": -0.06830472242133334,
-            "vol": 172.79324605171533,
-            "mean_over_vol": 0.04510438893355303,
+            "mean_value": 7.793733775007699,
+            "std_dev": 172.65814689408057,
+            "skewness": 0.3340492697447387,
+            "kurt": -0.06795913143876087,
+            "vol": 172.8339607110061,
+            "mean_over_vol": 0.04509376365007061,
             "pos_ratio": 0.47,
             "neg_ratio": 0.53,
             "pos_neg_ratio": 0.8867924528301886
         },
         "test": {
-            "mse": 0.022830268879297674,
-            "pearson_corr": 0.999999644857237,
-            "pearson_corr_without_mean": 0.9999996455230079,
+            "mse": 1.0386975961774787e-25,
+            "pearson_corr": 1.0,
+            "pearson_corr_without_mean": 1.0000000000000002,
             "conf_matrix": [
                 [
                     0.53,
@@ -63,69 +63,69 @@
                     0.47
                 ]
             ],
-            "mean_value": 7.793733775007695,
-            "std_dev": 172.61739076620563,
-            "skewness": 0.33440967385761167,
-            "kurt": -0.06830472242133334,
-            "vol": 172.79324605171533,
-            "mean_over_vol": 0.04510438893355303,
+            "mean_value": 7.793733775007699,
+            "std_dev": 172.65814689408057,
+            "skewness": 0.3340492697447387,
+            "kurt": -0.06795913143876087,
+            "vol": 172.8339607110061,
+            "mean_over_vol": 0.04509376365007061,
             "pos_ratio": 0.47,
             "neg_ratio": 0.53,
             "pos_neg_ratio": 0.8867924528301886
         },
         "train_pos": {
-            "mse": 0.021779357253144227,
-            "pearson_corr": 0.999999210250054,
-            "pearson_corr_without_mean": 0.9999997242064873,
+            "mse": 1.0422813485748993e-25,
+            "pearson_corr": 0.9999999999999999,
+            "pearson_corr_without_mean": 1.0,
             "conf_matrix": [
                 [
                     1.0
                 ]
             ],
-            "mean_value": 156.185977392237,
-            "std_dev": 114.31945610371797,
-            "skewness": 0.9522616591160009,
-            "kurt": 0.3860024595825293,
-            "vol": 193.55360388744575,
-            "mean_over_vol": 0.8069391334250817,
+            "mean_value": 156.21017214466403,
+            "std_dev": 114.3428518399435,
+            "skewness": 0.9524852786073886,
+            "kurt": 0.385993368413756,
+            "vol": 193.58694596577746,
+            "mean_over_vol": 0.8069251331248288,
             "pos_ratio": 1.0,
             "neg_ratio": 0.0,
             "pos_neg_ratio": Infinity
         },
         "val_pos": {
-            "mse": 0.021779357253144227,
-            "pearson_corr": 0.999999210250054,
-            "pearson_corr_without_mean": 0.9999997242064873,
+            "mse": 1.0422813485748993e-25,
+            "pearson_corr": 0.9999999999999999,
+            "pearson_corr_without_mean": 1.0,
             "conf_matrix": [
                 [
                     1.0
                 ]
             ],
-            "mean_value": 156.185977392237,
-            "std_dev": 114.31945610371797,
-            "skewness": 0.9522616591160009,
-            "kurt": 0.3860024595825293,
-            "vol": 193.55360388744575,
-            "mean_over_vol": 0.8069391334250817,
+            "mean_value": 156.21017214466403,
+            "std_dev": 114.3428518399435,
+            "skewness": 0.9524852786073886,
+            "kurt": 0.385993368413756,
+            "vol": 193.58694596577746,
+            "mean_over_vol": 0.8069251331248288,
             "pos_ratio": 1.0,
             "neg_ratio": 0.0,
             "pos_neg_ratio": Infinity
         },
         "test_pos": {
-            "mse": 0.021779357253144227,
-            "pearson_corr": 0.999999210250054,
-            "pearson_corr_without_mean": 0.9999997242064873,
+            "mse": 1.0422813485748993e-25,
+            "pearson_corr": 0.9999999999999999,
+            "pearson_corr_without_mean": 1.0,
             "conf_matrix": [
                 [
                     1.0
                 ]
             ],
-            "mean_value": 156.185977392237,
-            "std_dev": 114.31945610371797,
-            "skewness": 0.9522616591160009,
-            "kurt": 0.3860024595825293,
-            "vol": 193.55360388744575,
-            "mean_over_vol": 0.8069391334250817,
+            "mean_value": 156.21017214466403,
+            "std_dev": 114.3428518399435,
+            "skewness": 0.9524852786073886,
+            "kurt": 0.385993368413756,
+            "vol": 193.58694596577746,
+            "mean_over_vol": 0.8069251331248288,
             "pos_ratio": 1.0,
             "neg_ratio": 0.0,
             "pos_neg_ratio": Infinity

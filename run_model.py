@@ -1,14 +1,13 @@
 import argparse
 import gc
-import json
 import os
 
-from data_helper import DataProcessor
-from eval_helper import ModelEvaluator
-from model_helper import FeatureSelectorByModel
-from model_helper import ModelTrainer
-from result_helper import ResultSaver
-from util_helper import visualize_selected_features,load_params_from_file
+from core.data_helper import DataProcessor
+from core.eval_helper import ModelEvaluator
+from core.model_helper import FeatureSelectorByModel
+from core.model_helper import ModelTrainer
+from core.result_helper import ResultSaver
+from core.util_helper import visualize_selected_features,load_params_from_file
 
 
 def main(target_column, model_name, model_params_path, regressor_name, regressor_params_path, threshold, save_dir):
@@ -20,9 +19,9 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
 
 
     # 定义文件路径
-    train_file_path = './train.parquet'
-    val_file_path = './val.parquet'
-    test_file_path = './test.parquet'
+    train_file_path = 'data/train.parquet'
+    val_file_path = 'data/val.parquet'
+    test_file_path = 'data/test.parquet'
 
     # 初始化数据处理器
     data_processor = DataProcessor(target_column=target_column)

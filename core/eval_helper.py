@@ -3,8 +3,7 @@ from scipy.stats import skew, kurtosis, pearsonr
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import mean_squared_error
 
-from util_helper import Utils
-
+from .util_helper import Utils
 
 class EvaluationResult:
     def __init__(self, mse, pearson_corr, pearson_corr_without_mean, conf_matrix, mean_value, std_dev, skewness, kurt,

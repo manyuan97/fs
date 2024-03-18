@@ -2,20 +2,20 @@ import argparse
 import gc
 import os
 
-from data_helper import DataProcessor
-from eval_helper import ModelEvaluator
-from model_helper import ModelTrainer, FeatureSelectorByModel
-from result_helper import ResultSaver
-from util_helper import visualize_selected_features
+from core.data_helper import DataProcessor
+from core.eval_helper import ModelEvaluator
+from core.model_helper import ModelTrainer, FeatureSelectorByModel
+from core.result_helper import ResultSaver
+from core.util_helper import visualize_selected_features
 
 
-def main(target_column, alpha, precompute, save_dir):
+def main(target_column, alpha, precompute, save_dir,regressor_name, regressor_params):
     os.makedirs(save_dir, exist_ok=True)
 
     # 数据文件路径
-    train_file_path = './train.parquet'
-    val_file_path = './val.parquet'
-    test_file_path = './test.parquet'
+    train_file_path = 'data/train.parquet'
+    val_file_path = 'data/val.parquet'
+    test_file_path = 'data/test.parquet'
 
     # 初始化数据处理器
     data_processor = DataProcessor(target_column=target_column)
@@ -29,22 +29,28 @@ def main(target_column, alpha, precompute, save_dir):
 
     # 选择特征
     feature_selector = FeatureSelectorByModel(lasso_model)
-    _, X_train_selected, selected_features = feature_selector.select_features(X_train, prefit=True)
+    selector, X_train_selected, selected_features = feature_selector.select_features(X_train, prefit=True)
 
     visualize_path = os.path.join(save_dir, f'selected_features.png')
     visualize_selected_features(selected_features, X_train.shape[1], visualize_path)
 
+
+    new_model_trainer = ModelTrainer(model_name=regressor_name, params=regressor_params)
+    regressor = new_model_trainer.train_model(X_train_selected, y_train)
+
     # 评估模型
-    model_evaluator = ModelEvaluator(lasso_model)
-    metrics_train = model_evaluator.evaluate_model(X_train, y_train)
-    metrics_train_positive = model_evaluator.evaluate_model(X_train, y_train,filter_positive_pred=True)
+    model_evaluator = ModelEvaluator(regressor)
+    metrics_train = model_evaluator.evaluate_model(X_train_selected, y_train)
+    metrics_train_positive = model_evaluator.evaluate_model(X_train_selected, y_train,filter_positive_pred=True)
 
     del X_train, y_train, X_train_selected
     gc.collect()
 
     X_val, y_val, scaler = data_processor.load_and_preprocess_data(val_file_path, scaler=scaler)
-    metrics_val = model_evaluator.evaluate_model(X_val, y_val)
-    metrics_val_positive = model_evaluator.evaluate_model(X_val, y_val,filter_positive_pred=True)
+    X_val_selected = selector.transform(X_val)
+
+    metrics_val = model_evaluator.evaluate_model(X_val_selected, y_val)
+    metrics_val_positive = model_evaluator.evaluate_model(X_val_selected, y_val,filter_positive_pred=True)
 
 
     del X_val, y_val
@@ -52,10 +58,11 @@ def main(target_column, alpha, precompute, save_dir):
 
     X_test, y_test, scaler = data_processor.load_and_preprocess_data(test_file_path, scaler=scaler)
 
-    # 初始化模型训练器
-    metrics_test = model_evaluator.evaluate_model(X_test, y_test)
+    X_test_selected = selector.transform(X_test)
 
-    metrics_test_positive = model_evaluator.evaluate_model(X_test, y_test,filter_positive_pred=True)
+    metrics_test = model_evaluator.evaluate_model(X_test_selected, y_test)
+
+    metrics_test_positive = model_evaluator.evaluate_model(X_test_selected, y_test,filter_positive_pred=True)
 
 
     # 将评估结果转换为可保存的格式
@@ -88,8 +95,12 @@ if __name__ == "__main__":
                         help='The precompute parameter for the Lasso model, true or false.')
     parser.add_argument('--save_dir', type=str, default='results/lasso',
                         help='The file path to save metrics JSON.')
+    parser.add_argument('--regressor_name', type=str, default='linear_regression',
+                        help='The name of the regressor model.')
+    parser.add_argument('--regressor_params', type=str, default='./configs/linear_regression.json',
+                        help='File path to JSON file containing regressor parameters.')
 
     args = parser.parse_args()
     args_dict = vars(args)
 
-    main(args.target_column, args.alpha, args.precompute, args.save_dir)
+    main(args.target_column, args.alpha, args.precompute, args.save_dir,args.regressor_name, args.regressor_params)

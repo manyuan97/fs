@@ -1,13 +1,13 @@
 
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
-from util_helper import Utils
+from .util_helper import Utils
 
-@Utils.timeit
 class DataProcessor:
     def __init__(self, target_column='y1'):
         self.target_column = target_column
 
+    @Utils.timeit
     def load_and_preprocess_data(self, file_path, scaler=None):
         df = pd.read_parquet(file_path)
         if self.target_column == 'y1':

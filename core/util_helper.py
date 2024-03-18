@@ -30,7 +30,6 @@ def visualize_selected_features(selected_features, num_features, filename):
 
     image = image.reshape((dim, dim))
 
-    # Plot and save the image
     plt.figure(figsize=(10, 10))
     plt.imshow(image, cmap='Greys', interpolation='nearest')
     plt.title('Selected Features Visualization')
