@@ -49,9 +49,13 @@ def main(target_column, ks, feature_selection_method, regressor_name, regressor_
     data_processor = DataProcessor(target_column=target_column)
     regressor_params = load_params_from_file(regressor_params_path)
 
-    X_train, y_train, scaler = data_processor.load_and_preprocess_data('data/train.parquet')
-    X_val, y_val, _ = data_processor.load_and_preprocess_data('data/val.parquet', scaler=scaler)
-    X_test, y_test, _ = data_processor.load_and_preprocess_data('data/test.parquet', scaler=scaler)
+    train_file_path = 'data/train.parquet'
+    val_file_path = 'data/val.parquet'
+    test_file_path = 'data/test.parquet'
+
+    X_train, y_train, scaler = data_processor.load_and_preprocess_data(train_file_path)
+    X_val, y_val, _ = data_processor.load_and_preprocess_data(val_file_path, scaler=scaler)
+    X_test, y_test, _ = data_processor.load_and_preprocess_data(test_file_path, scaler=scaler)
 
     results = {}
     for k in ks:
