@@ -17,7 +17,6 @@ def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, targe
     visualize_path = os.path.join(save_dir, f'selected_features_alpha_{alpha}.png')
     visualize_selected_features(selected_features, X_train.shape[1], visualize_path)
 
-    # Load regressor params from file
     with open(regressor_params, 'r') as f:
         params = json.load(f)
 
