@@ -9,11 +9,11 @@ from core.result_helper import ResultSaver
 from core.util_helper import visualize_selected_features
 
 
-def main(target_column, alpha, precompute, save_dir,regressor_name, regressor_params):
+def main(target_column, alpha, precompute, save_dir,regressor_name, regressor_params,train_data):
     os.makedirs(save_dir, exist_ok=True)
 
     # 数据文件路径
-    train_file_path = 'data/train.parquet'
+    train_file_path = train_data
     val_file_path = 'data/val.parquet'
     test_file_path = 'data/test.parquet'
 
@@ -99,8 +99,10 @@ if __name__ == "__main__":
                         help='The name of the regressor model.')
     parser.add_argument('--regressor_params', type=str, default='./configs/linear_regression.json',
                         help='File path to JSON file containing regressor parameters.')
+    parser.add_argument('--train_data', type=str, default='./data/train.parquet',
+                        help='File path to JSON file containing regressor parameters.')
 
     args = parser.parse_args()
     args_dict = vars(args)
 
-    main(args.target_column, args.alpha, args.precompute, args.save_dir,args.regressor_name, args.regressor_params)
+    main(args.target_column, args.alpha, args.precompute, args.save_dir,args.regressor_name, args.regressor_params, args.train_data)
