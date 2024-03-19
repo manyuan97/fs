@@ -1,6 +1,7 @@
 import argparse
-import os
+import gc
 import json
+import os
 
 from core.data_helper import DataProcessor
 from core.eval_helper import ModelEvaluator
@@ -8,7 +9,9 @@ from core.model_helper import ModelTrainer, FeatureSelectorByModel
 from core.result_helper import ResultSaver
 from core.util_helper import visualize_selected_features
 
-def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, target_column, alpha, precompute, save_dir, regressor_name, regressor_params):
+
+def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, target_column, alpha, precompute, save_dir,
+                   regressor_name, regressor_params):
     model_trainer = ModelTrainer(model_name='lasso', alpha=alpha, precompute=precompute)
     lasso_model = model_trainer.train_model(X_train, y_train)
 
@@ -49,7 +52,11 @@ def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, targe
         'n_features': X_test_selected.shape[1],
     }
 
+    del model_trainer, lasso_model, feature_selector, selector, X_train_selected, selected_features, new_model_trainer, regressor, model_evaluator, X_val_selected, X_test_selected
+    gc.collect()
+
     return metrics
+
 
 def main(target_column, alphas, precompute, save_dir, regressor_name, regressor_params):
     os.makedirs(save_dir, exist_ok=True)
@@ -67,7 +74,8 @@ def main(target_column, alphas, precompute, save_dir, regressor_name, regressor_
     results = {}
     for alpha in alphas:
         print(f"Running experiment with alpha={alpha}")
-        metrics = run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, target_column, alpha, precompute, save_dir, regressor_name, regressor_params)
+        metrics = run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, target_column, alpha,
+                                 precompute, save_dir, regressor_name, regressor_params)
         results[f"alpha_{alpha}"] = metrics
 
         json_file_path = os.path.join(save_dir, f"alpha_{alpha}.json")
@@ -78,6 +86,7 @@ def main(target_column, alphas, precompute, save_dir, regressor_name, regressor_
     all_results_file_path = os.path.join(save_dir, "all_alphas.json")
     result_saver.save_metrics_as_json(results, all_results_file_path)
     print("All metrics stored in " + all_results_file_path)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Train, evaluate models and feature selection with alpha tuning.')
@@ -92,5 +101,6 @@ if __name__ == "__main__":
                         help='File path to JSON file containing regressor parameters.')
 
     args = parser.parse_args()
-    alphas = [0.00001, 0.00005, 0.0001, 0.0003, 0.0005, 0.001, 0.002, 0.003, 0.005, 0.01, 0.1]  # Define the range of alpha values to test
+    alphas = [0.00001, 0.00005, 0.0001, 0.0003, 0.0005, 0.001, 0.002, 0.003, 0.005, 0.01,
+              0.1]  # Define the range of alpha values to test
     main(args.target_column, alphas, args.precompute, args.save_dir, args.regressor_name, args.regressor_params)

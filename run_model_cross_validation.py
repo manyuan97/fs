@@ -1,4 +1,5 @@
 import argparse
+import gc
 import os
 
 import numpy as np
@@ -33,7 +34,7 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
 
     split_points = np.linspace(start=thresholds[0], stop=thresholds[-1], num=21)
 
-    selected_thresholds = [split_points[0],split_points[2],split_points[4],split_points[6]]
+    selected_thresholds = [split_points[0], split_points[2], split_points[4], split_points[6]]
     for i in range(len(split_points) - 1):
         current_interval_thresholds = thresholds[(thresholds >= split_points[i]) & (thresholds < split_points[i + 1])]
         if len(current_interval_thresholds) > 0:
@@ -75,18 +76,18 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
 
         selected_features = selector.get_support()
 
-        temp_metrics={
+        temp_metrics = {
 
             'threshold': thresh,
             'n_features': select_X_train.shape[1],
             'pearson_corr_without_mean': mse,
             'results': {
-            'train': metrics_train.__dict__,
-            'val': metrics_val.__dict__,
-            'test': metrics_test.__dict__,
-            'train_pos': metrics_train_pos.__dict__,
-            'val_pos': metrics_val_pos.__dict__,
-            'test_pos': metrics_test_pos.__dict__,
+                'train': metrics_train.__dict__,
+                'val': metrics_val.__dict__,
+                'test': metrics_test.__dict__,
+                'train_pos': metrics_train_pos.__dict__,
+                'val_pos': metrics_val_pos.__dict__,
+                'test_pos': metrics_test_pos.__dict__,
             },
             'selected_features': selected_features.tolist(),
         }
@@ -105,6 +106,9 @@ def main(target_column, model_name, model_params_path, regressor_name, regressor
 
         visualize_selected_features(selected_features, X_train.shape[1],
                                     os.path.join(save_dir, f'features_{thresh:.3f}.png'))
+
+        del feature_selector, selector, X_train_selected, select_X_train, regressor_trainer, regressor, select_X_val, select_X_test, model_evaluator,
+        gc.collect()
 
     model_evaluator = ModelEvaluator(best_model)
 

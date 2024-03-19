@@ -1,4 +1,5 @@
 import argparse
+import gc
 import os
 
 from sklearn.feature_selection import mutual_info_regression, f_regression
@@ -43,6 +44,9 @@ def run_experiment(X_train, y_train, X_val, y_val, X_test, y_test, scaler, targe
         'selected_features': selected_features.tolist(),
         'k': k
     }
+
+    del selector, X_train_selected, selected_features, model_trainer, regressor, model_evaluator
+    gc.collect()
 
     return metrics
 
